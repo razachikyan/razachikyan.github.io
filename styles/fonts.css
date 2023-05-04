@@ -14,3 +14,11 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Mardoto";
+  src: url("../assets/fonts/Mardoto-Medium.woff") format("woff2"),
+    url("../assets/fonts/Mardoto-Medium.woff2") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,5 +1,64 @@
 {
-  "header": {},
-  "main": {},
-  "footer": {}
+  "header.top.mail": "hrazdanverelak@gmail.com",
+  "header.top.phone": ["093 803592", "095 803592"],
+  "header.bottom.nav.services": "Our Services",
+  "header.bottom.nav.partners": "Our Partners",
+  "header.bottom.nav.products": "Our Products",
+  "header.bottom.nav.about": "About Us",
+  "header.bottom.nav.gallery": "Gallery",
+  "main.general.title": "Value for money and security",
+  "main.general.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more",
+  "main.general.button": "Go to the Products",
+  "main.offer.title": "We Offer",
+  "main.offer.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  "main.offer.list": [
+    {
+      "name": "Importing elevators",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+    },
+    {
+      "name": "Installation elevators",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+    },
+    {
+      "name": "Maintenance elevators",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+    },
+    {
+      "name": "Making elevators",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+    }
+  ],
+  "main.partners.title": "The latest Products",
+  "main.partners.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  "main.products.title": "The latest Products",
+  "main.products.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  "main.products.list": [
+    {
+      "name": "FJ-HD2",
+      "ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "car wall:": "Frosted stainless steel, mirror stainless steel",
+      "Floor:": "Frosted stainless steel",
+      "read more": "read more"
+    },
+    {
+      "name": "FJ-HD2",
+      "ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "car wall:": "Frosted stainless steel, mirror stainless steel",
+      "Floor:": "Frosted stainless steel",
+      "read more": "read more"
+    },
+    {
+      "name": "FJ-HD2",
+      "ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "car wall:": "Frosted stainless steel, mirror stainless steel",
+      "Floor:": "Frosted stainless steel",
+      "read more": "read more"
+    }
+  ],
+  "main.products.button": "View All",
+  "main.about.title": "About Us",
+  "main.about.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.",
+  "main.works.title": "Our Works",
+  "main.works.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
 }
