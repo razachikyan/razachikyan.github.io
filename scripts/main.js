@@ -1,7 +1,13 @@
-import hayeren from "../lang/am.json" assert { type: "json" };
-import ruseren from "../lang/ru.json" assert { type: "json" };
-import angleren from "../lang/en.json" assert { type: "json" };
+import am from "../lang/am.json" assert { type: "json" };
+import ru from "../lang/ru.json" assert { type: "json" };
+import en from "../lang/en.json" assert { type: "json" };
 import { getImageUrlsFor } from "./imagesScript.js";
+
+let languages = {
+  am,
+  ru,
+  en,
+};
 
 let products = document.querySelectorAll(".product__list");
 let partners = getItems(document.getElementById("partners"));
@@ -48,3 +54,16 @@ async function setProducts() {
 function getItems(iterable) {
   return Array.from(iterable.childNodes).filter((_, i) => i % 2 !== 0);
 }
+
+function setPageText(language) {
+  const lan = languages[language];
+  Object.keys(lan).forEach((key) => {
+    if (typeof lan[key] === "object") {
+      //code
+    } else if (typeof lan[key] === "string") {
+      document.getElementById(key).textContent = lan[key];
+    }
+  });
+}
+
+setPageText("en");

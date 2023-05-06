@@ -12,10 +12,13 @@
     <header class="header">
       <div class="header__top">
         <div class="container flex flex-between">
-          <a href="https://www.gmail.com" class="header__contact mail"
+          <a
+            href="https://www.gmail.com"
+            class="header__contact mail"
+            id="header.top.mail"
             >hrazdanverelak@gmail.com</a
           >
-          <div class="header__contact phone">
+          <div class="header__contact phone" id="header.top.phone">
             <span class="phone__number">093 803592</span>
             <span class="phone__number">095 803592</span>
           </div>
@@ -25,11 +28,21 @@
             <div class="header__block"></div>
             <nav class="header__nav">
               <ul class="header__list">
-                <li class="header__item">Our Services</li>
-                <li class="header__item">Our Partners</li>
-                <li class="header__item">Products</li>
-                <li class="header__item">About Us</li>
-                <li class="header__item">Gallery</li>
+                <li class="header__item" id="header.bottom.nav.services">
+                  Our Services
+                </li>
+                <li class="header__item" id="header.bottom.nav.partners">
+                  Our Partners
+                </li>
+                <li class="header__item" id="header.bottom.nav.products">
+                  Products
+                </li>
+                <li class="header__item" id="header.bottom.nav.about">
+                  About Us
+                </li>
+                <li class="header__item" id="header.bottom.nav.gallery">
+                  Gallery
+                </li>
               </ul>
             </nav>
           </div>
@@ -41,26 +54,30 @@
         <div class="general__background"></div>
         <div class="container">
           <div class="general__block">
-            <h2 class="general__title">Value for money and security</h2>
-            <p class="general__descr">
+            <h2 class="general__title" id="main.general.title">
+              Value for money and security
+            </h2>
+            <p class="general__descr" id="main.general.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more
             </p>
-            <button class="btn">Go to the Products</button>
+            <button class="btn" id="main.general.button">
+              Go to the Products
+            </button>
           </div>
         </div>
       </section>
       <section class="offer section">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title">We Offer</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.offer.title">We Offer</h2>
+            <p class="section__descr" id="main.offer.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
           </div>
-          <ul class="offer__list">
+          <ul class="offer__list" id="main.offer.list">
             <li class="offer__item">
               <div class="offer__block"></div>
               <h4 class="offer__name">Upgrade of elevators</h4>
@@ -91,8 +108,10 @@
       <section class="partners">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title">Our Partners</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.partners.title">
+              Our Partners
+            </h2>
+            <p class="section__descr" id="main.partners.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
@@ -119,13 +138,15 @@
       <section class="products section">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title">The latest Products</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.products.title">
+              The latest Products
+            </h2>
+            <p class="section__descr" id="main.products.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
           </div>
-          <ul class="product__list">
+          <ul class="product__list" id="main.products.list">
             <li class="product__item">
               <img src="#" class="product__image1" alt="product" />
               <div class="product__box">
@@ -214,19 +235,21 @@
               </div>
             </li>
           </ul>
-          <button class="btn">View All</button>
+          <button class="btn" id="main.products.button">View All</button>
         </div>
       </section>
       <section class="products section">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title">The latest Products</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.products.title">
+              The latest Products
+            </h2>
+            <p class="section__descr" id="main.products.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
           </div>
-          <ul class="product__list">
+          <ul class="product__list" id="main.products.list">
             <li class="product__item">
               <img src="#" class="product__image" alt="product" />
               <div class="product__box">
@@ -315,14 +338,16 @@
               </div>
             </li>
           </ul>
-          <button class="btn">View All</button>
+          <button class="btn" id="main.products.button">View All</button>
         </div>
       </section>
       <section class="products section">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title">The latest Products</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.products.title">
+              The latest Products
+            </h2>
+            <p class="section__descr" id="main.products.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
@@ -416,14 +441,16 @@
               </div>
             </li>
           </ul>
-          <button class="btn">View All</button>
+          <button class="btn" id="main.products.list">View All</button>
         </div>
       </section>
       <section class="aboutus">
         <div class="aboutus__filter"></div>
         <div class="aboutus__box">
-          <h2 class="section__title aboutus__title">About Us</h2>
-          <p class="section__descr aboutus__descr">
+          <h2 class="section__title aboutus__title" id="main.about.title">
+            About Us
+          </h2>
+          <p class="section__descr aboutus__descr" id="main.about.description">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -435,8 +462,8 @@
       <section class="works section">
         <div class="container">
           <div class="section__text works__text">
-            <h2 class="section__title">Our Works</h2>
-            <p class="section__descr">
+            <h2 class="section__title" id="main.works.title">Our Works</h2>
+            <p class="section__descr" id="main.works.description">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
