@@ -1,6 +1,9 @@
 {
   "header.top.mail": "hrazdanverelak@gmail.com",
-  "header.top.phone": ["093 803592", "095 803592"],
+  "header.top.phone": [
+    { "header.phone.number": "093 803592" },
+    { "header.phone.number": "095 803592" }
+  ],
   "header.bottom.nav.services": "Our Services",
   "header.bottom.nav.partners": "Our Partners",
   "header.bottom.nav.products": "Our Products",
@@ -13,20 +16,20 @@
   "main.offer.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   "main.offer.list": [
     {
-      "name": "Importing elevators",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+      "offer.item.name": "Importing elevators",
+      "offer.item.text": "It is a long established fact that a reader will be distracted by the readable content of."
     },
     {
-      "name": "Installation elevators",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+      "offer.item.name": "Installation elevators",
+      "offer.item.text": "It is a long established fact that a reader will be distracted by the readable content of."
     },
     {
-      "name": "Maintenance elevators",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+      "offer.item.name": "Maintenance elevators",
+      "offer.item.text": "It is a long established fact that a reader will be distracted by the readable content of."
     },
     {
-      "name": "Making elevators",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of."
+      "offer.item.name": "Making elevators",
+      "offer.item.text": "It is a long established fact that a reader will be distracted by the readable content of."
     }
   ],
   "main.partners.title": "Our Partners",
@@ -35,25 +38,25 @@
   "main.products.description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   "main.products.list": [
     {
-      "name": "FJ-HD2",
-      "ceilling:": "Frosted stainless steel, mirror stainless steel",
-      "car wall:": "Frosted stainless steel, mirror stainless steel",
-      "Floor:": "Frosted stainless steel",
-      "read more": "read more"
+      "product.item.name": "FJ-HD2",
+      "product.item.ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.car.wall:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.floor:": "Frosted stainless steel",
+      "read.more": "read more"
     },
     {
-      "name": "FJ-HD2",
-      "ceilling:": "Frosted stainless steel, mirror stainless steel",
-      "car wall:": "Frosted stainless steel, mirror stainless steel",
-      "Floor:": "Frosted stainless steel",
-      "read more": "read more"
+      "product.item.name": "FJ-HD2",
+      "product.item.ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.car.wall:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.floor:": "Frosted stainless steel",
+      "read.more": "read more"
     },
     {
-      "name": "FJ-HD2",
-      "ceilling:": "Frosted stainless steel, mirror stainless steel",
-      "car wall:": "Frosted stainless steel, mirror stainless steel",
-      "Floor:": "Frosted stainless steel",
-      "read more": "read more"
+      "product.item.name": "FJ-HD2",
+      "product.item.ceilling:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.car.wall:": "Frosted stainless steel, mirror stainless steel",
+      "product.item.floor:": "Frosted stainless steel",
+      "read.more": "read more"
     }
   ],
   "main.products.button": "View All",

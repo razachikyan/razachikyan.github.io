@@ -58,8 +58,12 @@ function getItems(iterable) {
 function setPageText(language) {
   const lan = languages[language];
   Object.keys(lan).forEach((key) => {
-    if (typeof lan[key] === "object") {
-      //code
+    if (Array.isArray(lan[key])) {
+      lan[key].forEach((obj) => {
+        Object.keys(obj).forEach((key) => {
+          document.getElementById(key).textContent = obj[key];
+        });
+      });
     } else if (typeof lan[key] === "string") {
       document.getElementById(key).textContent = lan[key];
     }

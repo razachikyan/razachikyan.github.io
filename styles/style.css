@@ -5,6 +5,7 @@
   --black: #000;
   --text-color: #19191e;
   --body-text-color: #5e5e61;
+  --gold: #c89d66;
 }
 .flex {
   display: flex;
@@ -137,7 +138,7 @@ p {
 }
 
 .header__top {
-  background-color: var(--dark-blue);
+  background-color: #0b0b0c;
   padding-top: 6px;
   padding-bottom: 6px;
 }
@@ -278,6 +279,10 @@ p {
   padding: 21px 35.4px;
 }
 
+.partner__logo {
+  filter: grayscale(100%);
+}
+
 /* Products */
 .products:not(:last-child) {
   padding-bottom: 0;
@@ -340,9 +345,37 @@ p {
 }
 
 .product__descr {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__key {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-color);
+}
+
+.product__value {
+  max-width: 272px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: var(--body-text-color);
+}
+
+.product__more {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration-line: underline;
+  color: var(--gold);
 }
 
 /* About us */
