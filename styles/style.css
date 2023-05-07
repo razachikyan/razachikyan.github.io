@@ -114,11 +114,11 @@ p {
   background-repeat: no-repeat;
 }
 
-.phone__number {
+.header__number {
   text-decoration-line: underline;
 }
 
-.phone__number:first-child {
+.header__number:first-child {
   margin-right: 12px;
 }
 
@@ -362,7 +362,9 @@ p {
   color: var(--text-color);
 }
 
-.product__value {
+.product__ceilling,
+.product__wall,
+.product__floor {
   max-width: 272px;
   font-weight: 400;
   font-size: 16px;

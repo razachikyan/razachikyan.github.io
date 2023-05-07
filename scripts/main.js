@@ -59,11 +59,7 @@ function setPageText(language) {
   const lan = languages[language];
   Object.keys(lan).forEach((key) => {
     if (Array.isArray(lan[key])) {
-      lan[key].forEach((obj) => {
-        Object.keys(obj).forEach((key) => {
-          // document.getElementById(key).textContent = obj[key];
-        });
-      });
+      lan[key].forEach((obj) => {});
     } else if (typeof lan[key] === "string") {
       document.getElementById(key).textContent = lan[key];
     }
