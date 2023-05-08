@@ -16,9 +16,64 @@
             href="https://www.gmail.com"
             class="header__contact mail"
             id="header.top.mail"
-            >hrazdanverelak@gmail.com</a
           >
-          <div class="header__contact phone" id="header.top.phone">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M14.1666 17.0833H5.83329C3.33329 17.0833 1.66663 15.8333 1.66663 12.9166V7.08329C1.66663 4.16663 3.33329 2.91663 5.83329 2.91663H14.1666C16.6666 2.91663 18.3333 4.16663 18.3333 7.08329V12.9166C18.3333 15.8333 16.6666 17.0833 14.1666 17.0833Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16.6667 6.66663L12.4934 10.0107C11.12 11.1075 8.8667 11.1075 7.49337 10.0107L3.33337 6.66663"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            hrazdanverelak@gmail.com
+          </a>
+          <div class="header__contact" id="header.top.phone">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="20"
+              viewBox="0 0 15 20"
+              fill="none"
+            >
+              <path
+                d="M14.1 5.5V14.5C14.1 18.1 13.3125 19 10.1625 19H5.4375C2.2875 19 1.5 18.1 1.5 14.5V5.5C1.5 1.9 2.2875 1 5.4375 1H10.1625C13.3125 1 14.1 1.9 14.1 5.5Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.3751 4.15002H6.2251"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.7999 16.3C8.29696 16.3 8.6999 15.8971 8.6999 15.4C8.6999 14.9029 8.29696 14.5 7.7999 14.5C7.30285 14.5 6.8999 14.9029 6.8999 15.4C6.8999 15.8971 7.30285 16.3 7.7999 16.3Z"
+                fill="white"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             <span class="header__number">093 803592</span>
             <span class="header__number">095 803592</span>
           </div>
@@ -27,7 +82,8 @@
           <div class="container flex flex-between">
             <div class="header__block"></div>
             <nav class="header__nav">
-              <ul class="header__list">
+              <div class="burger" id="burger"></div>
+              <ul class="header__list hidden" id="burger-list">
                 <li class="header__item" id="header.bottom.nav.services">
                   Our Services
                 </li>
@@ -77,6 +133,47 @@
               the readable content of a page when looking at its layout.
             </p>
           </div>
+          <div class="offer__swiper">
+            <swiper-container
+              class="mySwiper"
+              space-between="30"
+              slides-per-view="auto"
+              pagination="false"
+            >
+              <swiper-slide
+                ><div class="offer__block"></div>
+                <h4 class="offer__name">Upgrade of elevators</h4>
+                <p class="offer__text" id="offer__text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of.
+                </p></swiper-slide
+              >
+              <swiper-slide
+                ><div class="offer__block"></div>
+                <h4 class="offer__name">Upgrade of elevators</h4>
+                <p class="offer__text" id="offer__text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of.
+                </p></swiper-slide
+              >
+              <swiper-slide
+                ><div class="offer__block"></div>
+                <h4 class="offer__name">Upgrade of elevators</h4>
+                <p class="offer__text" id="offer__text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of.
+                </p></swiper-slide
+              >
+              <swiper-slide
+                ><div class="offer__block"></div>
+                <h4 class="offer__name">Upgrade of elevators</h4>
+                <p class="offer__text" id="offer__text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of.
+                </p></swiper-slide
+              >
+            </swiper-container>
+          </div>
           <ul class="offer__list" id="main.offer.list">
             <li class="offer__item">
               <div class="offer__block"></div>
@@ -116,6 +213,30 @@
               the readable content of a page when looking at its layout.
             </p>
           </div>
+          <swiper-container
+            class="partners__swiper"
+            id="partners-swipe"
+            space-between="30"
+            slides-per-view="auto"
+            pagination="false"
+          >
+            <swiper-slide
+              ><img src="#" alt="partner" class="partner__logo"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="#" alt="partner" class="partner__logo"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="#" alt="partner" class="partner__logo"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="#" alt="partner" class="partner__logo"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="#" alt="partner" class="partner__logo"
+            /></swiper-slide>
+          </swiper-container>
+
           <ul class="partners__list" id="partners">
             <li class="partners__item">
               <img src="#" alt="partner" class="partner__logo" />
@@ -153,21 +274,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -186,7 +297,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -197,21 +308,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -230,7 +331,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -241,21 +342,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -274,7 +365,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -301,21 +392,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -334,7 +415,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -345,21 +426,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -378,7 +449,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -389,21 +460,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -422,7 +483,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -449,21 +510,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -482,7 +533,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -493,21 +544,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -526,7 +567,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -537,21 +578,11 @@
                 <div class="product__flex">
                   <h5 class="product__name">FJ-HD2</h5>
                   <ul class="rating">
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
-                    <li class="star">
-                      <img src="#" alt="star" />
-                    </li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                 </div>
                 <div class="product__descr">
@@ -570,7 +601,7 @@
                   <div class="col">
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel</p>
-                    <a href="" class="read__more"> Read More </a>
+                    <a href="" class="product__more"> Read More </a>
                   </div>
                 </div>
               </div>
@@ -666,7 +697,8 @@
         <span class="bottom_text">Copyright 2023</span>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script type="module" src="./scripts/imagesScript.js" defer></script>
-    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" defer src="./scripts/main.js"></script>
   </body>
 </html>
