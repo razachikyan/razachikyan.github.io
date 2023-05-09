@@ -70,13 +70,13 @@ async function setPartnersSwipe() {
 
 async function setProductSwipe() {
   await getImageUrlsFor("products").then((res) => {
-    [productSwipe1, productSwipe2, productSwipe3].forEach(
+    [productSwipe1, productSwipe2, productSwipe3].forEach((list) => {
       list.forEach((product, i) => {
         console.log(product.querySelector("img"), res[i]);
         if (product.querySelector("img"))
           product.querySelector("img").setAttribute("src", res[i]);
-      })
-    );
+      });
+    });
   });
 }
 
