@@ -27,6 +27,10 @@
   display: none;
 }
 
+.product__swiper {
+  display: none;
+}
+
 .btn {
   background: #c89d66;
   border-radius: 2px;
@@ -123,11 +127,14 @@ p {
   display: none;
 }
 
-.header__number {
-  text-decoration-line: underline;
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .header__contact {
+  text-decoration-line: underline;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -373,6 +380,7 @@ p {
 }
 
 .product__more {
+  margin-left: auto;
   white-space: nowrap;
   font-weight: 700;
   font-size: 16px;
@@ -514,8 +522,7 @@ p {
   gap: 14.4px;
 }
 
-.facebook,
-.instagram {
+.social__media {
   width: 40.7px;
   height: 40.7px;
   border-radius: 50%;
@@ -697,5 +704,19 @@ p {
 
   .partners__swiper {
     display: block;
+  }
+
+  .product__swiper {
+    display: block;
+  }
+
+  .product__list {
+    display: none;
+  }
+
+  .product__image,
+  .product__image1 {
+    width: initial;
+    height: initial;
   }
 }

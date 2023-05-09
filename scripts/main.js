@@ -25,6 +25,9 @@ let languages = {
 let products = document.querySelectorAll(".product__list");
 let partners = getItems(document.getElementById("partners"));
 let partnersSwipe = getItems(document.getElementById("partners-swipe"));
+let productSwipe1 = getItems(document.getElementById("product-swipe-1"));
+let productSwipe2 = getItems(document.getElementById("product-swipe-2"));
+let productSwipe3 = getItems(document.getElementById("product-swipe-3"));
 let ratingArr = document.querySelectorAll(".rating");
 const burger = document.getElementById("burger");
 const burgerList = document.getElementById("burger-list");
@@ -43,6 +46,7 @@ setPartners();
 setPartnersSwipe();
 setProducts();
 setStars();
+setProductSwipe();
 
 async function setPartners() {
   await getImageUrlsFor("partners").then((res) => {
@@ -61,6 +65,18 @@ async function setPartnersSwipe() {
       if (partner.querySelector("img"))
         partner.querySelector("img").setAttribute("src", res[i]);
     });
+  });
+}
+
+async function setProductSwipe() {
+  await getImageUrlsFor("products").then((res) => {
+    [productSwipe1, productSwipe2, productSwipe3].forEach(
+      list.forEach((product, i) => {
+        console.log(product.querySelector("img"), res[i]);
+        if (product.querySelector("img"))
+          product.querySelector("img").setAttribute("src", res[i]);
+      })
+    );
   });
 }
 
