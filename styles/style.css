@@ -720,4 +720,21 @@ p {
     width: initial;
     height: initial;
   }
+
+  .works__descr {
+    display: none;
+  }
+
+  .work__images {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .work__img {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 360px) {
 }
