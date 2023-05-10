@@ -1,13 +1,8 @@
 import am from "../lang/am.json" assert { type: "json" };
 import ru from "../lang/ru.json" assert { type: "json" };
 import en from "../lang/en.json" assert { type: "json" };
-import { getImageUrlsFor } from "./imagesScript.js";
+import { getImageData } from "./imagesScript.js";
 
-/*
-    Iconnery svg,
-    productnery backgroundov
-    + QR
-*/
 const starOn = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
 <path d="M16.4833 18L10.5397 15.0658L4.56336 17.9466L5.57574 11.5021L0.92749 6.82869L7.50252 5.77238L10.605 0L13.653 5.80439L20.2063 6.90338L15.5254 11.5448L16.4833 18Z" fill="#C89D66"/>
 </svg>`;
@@ -22,12 +17,6 @@ let languages = {
   en,
 };
 
-let products = document.querySelectorAll(".product__list");
-let partners = getItems(document.getElementById("partners"));
-let partnersSwipe = getItems(document.getElementById("partners-swipe"));
-let productSwipe1 = getItems(document.getElementById("product-swipe-1"));
-let productSwipe2 = getItems(document.getElementById("product-swipe-2"));
-let productSwipe3 = getItems(document.getElementById("product-swipe-3"));
 let ratingArr = document.querySelectorAll(".rating");
 const burger = document.getElementById("burger");
 const burgerList = document.getElementById("burger-list");
@@ -42,51 +31,53 @@ burger.addEventListener("click", () => {
   }
 });
 
-setPartners();
-setPartnersSwipe();
 setProducts();
 setStars();
-setProductSwipe();
-
-async function setPartners() {
-  await getImageUrlsFor("partners").then((res) => {
-    partners.forEach((partner, i) => {
-      if (partner.querySelector("img")) {
-        partner.querySelector("img").setAttribute("src", res[i]);
-      }
-    });
-  });
-}
-
-async function setPartnersSwipe() {
-  await getImageUrlsFor("partners").then((res) => {
-    partnersSwipe.forEach((partner, i) => {
-      if (partner.querySelector("img"))
-        partner.querySelector("img").setAttribute("src", res[i]);
-    });
-  });
-}
-
-async function setProductSwipe() {
-  await getImageUrlsFor("products").then((res) => {
-    [productSwipe1, productSwipe2, productSwipe3].forEach((list) => {
-      list.forEach((product, i) => {
-        if (product.querySelector("img"))
-          product.querySelector("img").setAttribute("src", res[i]);
-      });
-    });
-  });
-}
+setProductsSwiper();
 
 async function setProducts() {
-  await getImageUrlsFor("products").then((res) => {
-    products.forEach(async (productList, i) => {
-      let temp = 0;
-      if (i > 0) temp = 3;
-      const prods = getItems(productList);
-      prods.forEach((prod, i) => {
-        prod.querySelector("img").setAttribute("src", res[i + temp]);
-      });
+  await getImageData("products-home").then((res) => {
+    fixHomeProds(res).forEach((subArr, i) => {
+      const section = document.getElementById(`products${i + 1}`);
+      Array.from(getItems(section.querySelector(`#products-list`))).forEach(
+        (item, j) => {
+          if (item.querySelector("img")) {
+            item.querySelector("img").setAttribute("src", subArr[j].url);
+          }
+          [".product__ceilling", ".product__wall", ".product__floor"].forEach(
+            (className, k) => {
+              if (item.querySelector(className)) {
+                item.querySelector(className).textContent =
+                  subArr[j].description.ceilling.substring(0, 31 - k * 5) +
+                  " ...";
+              }
+            }
+          );
+        }
+      );
+    });
+  });
+}
+async function setProductsSwiper() {
+  await getImageData("products-home").then((res) => {
+    fixHomeProds(res).forEach((subArr, i) => {
+      const section = document.getElementById(`products${i + 1}`);
+      Array.from(getItems(section.querySelector(`#product-swiper`))).forEach(
+        (item, j) => {
+          if (item.querySelector("img")) {
+            item.querySelector("img").setAttribute("src", subArr[j].url);
+          }
+          [".product__ceilling", ".product__wall", ".product__floor"].forEach(
+            (className, k) => {
+              if (item.querySelector(className)) {
+                item.querySelector(className).textContent =
+                  subArr[j].description.ceilling.substring(0, 31 - k * 5) +
+                  " ...";
+              }
+            }
+          );
+        }
+      );
     });
   });
 }
@@ -99,12 +90,10 @@ function getItems(iterable) {
 function setPageText(language) {
   const lan = languages[language];
   Object.keys(lan).forEach((key) => {
-    if (Array.isArray(lan[key])) {
-      getItems(document.getElementById(key)).forEach((child) => {
-        // console.log(child);
-      });
-    } else if (typeof lan[key] === "string") {
-      document.getElementById(key).textContent = lan[key];
+    if (!Array.isArray(lan[key])) {
+      if (typeof lan[key] === "string") {
+        document.getElementById(key).textContent = lan[key];
+      }
     }
   });
 }
@@ -119,6 +108,44 @@ function setStars() {
       }
     });
   });
+}
+
+function parseResponse(response) {
+  response = response.replace(/&quot;/g, '"');
+  const parsedResponse = JSON.parse(response);
+  return parsedResponse;
+}
+
+function splitArr(arr) {
+  let res = [];
+  let temp = [];
+  for (let i = 0; i < arr.length; ++i) {
+    if (temp.length === 3) {
+      res.push(temp);
+      temp = [];
+      temp.push(arr[i]);
+    } else {
+      temp.push(arr[i]);
+    }
+  }
+  if (temp.length === 3) res.push(temp);
+  res.push([...res[1]]);
+  return res;
+}
+
+function fixHomeProds(res) {
+  return splitArr(
+    res
+      .map((item) => {
+        item.description = parseResponse(item.description);
+        return item;
+      })
+      .sort((item1, item2) => {
+        if (item1.type == "top" && item2.type == "top") return 0;
+        else if (item1.type === item2.type) return -1;
+        else if (item1.type == "bottom" && item2.type == "top") return 1;
+      })
+  );
 }
 
 setPageText("en");

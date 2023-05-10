@@ -1,11 +1,11 @@
 const API_KEY = "cd4bdcfd2808af98a4feee11386a3010";
 const ALBUMS = {
-  products: "72177720307996298",
-  partners: "72177720307984217",
-  stars: "72177720308019708",
+  test: "72177720307934040",
+  a: "72177720307934480",
+  "products-home": "72177720308173434",
 };
 
-export async function getImageUrlsFor(album) {
+export async function getImageData(album) {
   let albumId = ALBUMS[album];
   if (albumId === undefined) {
     console.error(
@@ -15,17 +15,27 @@ export async function getImageUrlsFor(album) {
     return [];
   }
   let data = await fetchAlbumImagesData(albumId);
-  return getImageUrls(data.photoset.photo);
+  return buildImagesData(data.photoset.photo);
 }
 
-function getImageUrls(photos) {
-  let urls = [];
+function buildImagesData(photos) {
+  let data = [];
   photos.forEach((photo) => {
-    urls.push(
-      `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`
-    );
+    data.push({
+      id: photo.id,
+      url: buildImageUrl(photo),
+      description: getDescription(photo),
+    });
   });
-  return urls;
+  return data;
+}
+
+function getDescription(photo) {
+  return photo?.description?._content;
+}
+
+function buildImageUrl(photo) {
+  return `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`;
 }
 
 async function fetchAlbumImagesData(albumId) {
@@ -56,13 +66,5 @@ function backupData() {
 }
 
 function makeAlbumURL(albumId) {
-  return (
-    `https://api.flickr.com` +
-    `/services/rest/` +
-    `?method=flickr.photosets.getPhotos` +
-    `&api_key=${API_KEY}` +
-    `&photoset_id=${albumId}` +
-    `&format=json` +
-    `&nojsoncallback=1`
-  );
+  return `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${albumId}&format=json&nojsoncallback=1&extras=description`;
 }

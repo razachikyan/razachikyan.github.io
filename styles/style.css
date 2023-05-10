@@ -181,6 +181,9 @@ p {
   line-height: 150%;
 }
 
+.header__number {
+  cursor: pointer;
+}
 /*main*/
 
 /* General */
