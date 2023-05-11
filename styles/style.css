@@ -11,12 +11,40 @@
   display: flex;
 }
 
+.close {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+}
+
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  top: 4px;
+  left: 16px;
+  height: 28px;
+  background-color: var(--white);
+}
+
+.close::after {
+  transform: rotate(45deg);
+}
+
+.close::before {
+  transform: rotate(-45deg);
+}
+
 .flex-between {
   justify-content: space-between;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .offer__swiper {
@@ -128,6 +156,10 @@ p {
 }
 
 /*header*/
+
+.burger__list {
+  display: none;
+}
 
 .mobile__block {
   width: 78px;
@@ -657,17 +689,28 @@ p {
     position: relative;
   }
 
-  .header__list {
-    position: absolute;
-    top: 20px;
+  .burger__list {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
     right: 0;
-    width: 150px;
-    background-color: var(--black);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   .header__item {
-    padding: 10px 20px;
+    padding: 20px 82px;
     cursor: pointer;
+    border: 0.5px solid var(--text-color);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .close {
+    display: block;
+    margin: 20px 20px 20px auto;
   }
 
   .header__item:active {
@@ -771,6 +814,16 @@ p {
     display: none;
   }
 
+  .burger__list {
+    top: 0;
+    left: 0;
+  }
+
+  .header__item {
+    padding: 40px 20px;
+    font-size: 30px;
+  }
+
   .header__contact,
   .mail {
     display: none;
@@ -782,6 +835,47 @@ p {
 
   .header__top > .container {
     align-items: center;
+  }
+
+  .section {
+    padding: 100px 0;
+  }
+
+  .section__title {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .product__ceilling,
+  .product__floor,
+  .product__wall,
+  .product__key {
+    font-size: 14px;
+  }
+
+  .product__box {
+    padding: 0;
+  }
+
+  .product__key {
+    white-space: nowrap;
+  }
+
+  .general {
+    padding: 100px 0;
+  }
+
+  .general__title {
+    font-size: 55px;
+  }
+
+  .general__btn {
+    width: 100%;
+  }
+
+  swiper-side {
+    width: 75%;
   }
 }
 

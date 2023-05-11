@@ -21,19 +21,20 @@ let ratingArr = document.querySelectorAll(".rating");
 const burger = document.getElementById("burger");
 const burgerMob = document.getElementById("burger-mobile");
 const burgerList = document.getElementById("burger-list");
+const closeBurger = document.getElementById("burger-close");
 
 [burger, burgerMob].forEach((item) => {
   item.addEventListener("click", () => {
-    console.log("hello");
-    if (burgerList.classList.contains("hidden")) {
-      burgerList.classList.add("active");
-      burgerList.classList.remove("hidden");
-    } else {
-      burgerList.classList.remove("active");
-      burgerList.classList.add("hidden");
-    }
+    burgerList.classList.add("active");
+    burgerList.classList.remove("hidden");
   });
 });
+
+closeBurger.addEventListener("click", () => {
+  burgerList.classList.remove("active");
+  burgerList.classList.add("hidden");
+});
+
 setProducts();
 setStars();
 setProductsSwiper();
