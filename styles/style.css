@@ -880,4 +880,178 @@ p {
 }
 
 @media (max-width: 360px) {
+  .header__top {
+    padding: 12px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .general {
+    padding: 142px 0 162px 0;
+  }
+
+  .general__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+
+  .general__descr {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 56px;
+  }
+
+  .general__btn {
+    font-size: 16px;
+    line-height: 150%;
+    padding: 12px;
+  }
+
+  .offer {
+    padding: 57px 0 120px 0;
+  }
+
+  .section__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .offer__title {
+    margin-bottom: 16px;
+  }
+
+  .section__descr {
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  .offer > .section__descr {
+    margin-bottom: 42px;
+  }
+
+  swiper-slide {
+    max-width: 234px;
+    padding: 24px 16px;
+  }
+
+  .offer__block {
+    max-width: 61px;
+    max-height: 61px;
+    margin-bottom: 32px;
+  }
+
+  .offer__name {
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 12px;
+  }
+
+  .offer__text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .offer__swiper > swiper-slide {
+    box-shadow: 0px 4px 30px rgba(89, 89, 107, 0.08);
+  }
+
+  .partners {
+    padding: 47px 0 51px 0;
+  }
+
+  .partners > .section__title {
+    margin-bottom: 12px;
+  }
+
+  .section__descr {
+    margin-bottom: 51px;
+  }
+
+  .products {
+    padding: 89px 0 82px 0;
+  }
+
+  #products2,
+  #products3 {
+    display: none;
+  }
+
+  .products > .section__title {
+    margin-bottom: 12px;
+  }
+
+  .product__swiper > swiper-slide {
+    padding: 0;
+  }
+
+  .product__name {
+    white-space: nowrap;
+  }
+
+  .product__image1 {
+    margin-bottom: 24px;
+  }
+
+  .product__box {
+    padding: 10px 16px;
+  }
+
+  .product__flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .product__descr {
+    gap: 12px;
+  }
+
+  .col {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .product__key,
+  .product__ceilling,
+  .product__floor,
+  .product__wall {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .product__swiper {
+    margin-bottom: 65px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .aboutus {
+    padding: 233px 0;
+  }
+
+  .aboutus__filter {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .works {
+    padding: 330px 0;
+  }
+
+  .works__text {
+    display: none;
+  }
+}
+
+@media (max-width: 200px) {
+  .container {
+    padding: 0 5px;
+  }
 }
