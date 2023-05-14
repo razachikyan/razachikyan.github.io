@@ -3,6 +3,7 @@ const ALBUMS = {
   test: "72177720307934040",
   a: "72177720307934480",
   "products-home": "72177720308173434",
+  "work-gallery": "72177720308254455",
 };
 
 export async function getImageData(album) {

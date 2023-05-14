@@ -22,8 +22,12 @@ const burger = document.getElementById("burger");
 const burgerMob = document.getElementById("burger-mobile");
 const burgerList = document.getElementById("burger-list");
 const closeBurger = document.getElementById("burger-close");
+const mainWorkImage = document.getElementById("main-work-image");
+const workImages = Array.from(document.querySelectorAll(".work__img"));
+const linkImage = document.getElementById("work-image-link");
+workImages.pop();
 
-[burger, burgerMob].forEach((item) => {
+[(burger, burgerMob)].forEach((item) => {
   item.addEventListener("click", () => {
     burgerList.classList.add("active");
     burgerList.classList.remove("hidden");
@@ -38,6 +42,37 @@ closeBurger.addEventListener("click", () => {
 setProducts();
 setStars();
 setProductsSwiper();
+setGalleryPictures();
+
+async function setGalleryPictures() {
+  await getImageData("work-gallery").then((res) => {
+    const data = res.map((item) => {
+      item.description = parseResponse(item.description);
+      return item;
+    });
+
+    if (mainWorkImage) {
+      mainWorkImage.setAttribute(
+        "src",
+        data.find((item) => item.description.name === "main").url
+      );
+    }
+    if (workImages && workImages.length > 0) {
+      workImages.forEach((img, i) => {
+        img.setAttribute(
+          "src",
+          data.find((item) => item.description.name === `work${i + 1}`).url
+        );
+      });
+    }
+    if (linkImage) {
+      linkImage.setAttribute(
+        "src",
+        data.find((item) => item.description.name === "link").url
+      );
+    }
+  });
+}
 
 async function setProducts() {
   await getImageData("products-home").then((res) => {
