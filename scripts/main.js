@@ -21,7 +21,6 @@ let ratingArr = document.querySelectorAll(".rating");
 const burger = document.getElementById("burger");
 const burgerMob = document.getElementById("burger-mobile");
 const burgerList = document.getElementById("burger-list");
-const closeBurger = document.getElementById("burger-close");
 const mainWorkImage = document.getElementById("main-work-image");
 const workImages = Array.from(document.querySelectorAll(".work__img"));
 const linkImage = document.getElementById("work-image-link");
@@ -34,9 +33,11 @@ workImages.pop();
   });
 });
 
-closeBurger.addEventListener("click", () => {
-  burgerList.classList.remove("active");
-  burgerList.classList.add("hidden");
+document.getElementById("burger-list").addEventListener("click", (event) => {
+  if (event.target.classList.contains("close")) {
+    burgerList.classList.remove("active");
+    burgerList.classList.add("hidden");
+  }
 });
 
 setProducts();
