@@ -24,6 +24,22 @@ const burgerList = document.getElementById("burger-list");
 const mainWorkImage = document.getElementById("main-work-image");
 const workImages = Array.from(document.querySelectorAll(".work__img"));
 const linkImage = document.getElementById("work-image-link");
+const radioButtons = document.querySelectorAll(".radio");
+
+if (radioButtons.length && radioButtons.length > 0) {
+  Array.from(radioButtons).forEach((btn) => {
+    btn.onchange = () => {
+      debugger;
+      Array.from(radioButtons).forEach((btn) => {
+        const custom = btn?.parentNode?.querySelector(".custom__radio");
+        btn.checked
+          ? custom.classList.add("radio__on")
+          : custom.classList.remove("radio__on");
+      });
+    };
+  });
+}
+
 workImages.pop();
 
 [(burger, burgerMob)].forEach((item) => {
@@ -77,47 +93,52 @@ async function setGalleryPictures() {
 
 async function setProducts() {
   await getImageData("products-home").then((res) => {
-    fixHomeProds(res).forEach((subArr, i) => {
-      const section = document.getElementById(`products${i + 1}`);
-      Array.from(getItems(section.querySelector(`#products-list`))).forEach(
-        (item, j) => {
-          if (item.querySelector("img")) {
-            item.querySelector("img").setAttribute("src", subArr[j].url);
-          }
-          [".product__ceilling", ".product__wall", ".product__floor"].forEach(
-            (className, k) => {
-              if (item.querySelector(className)) {
-                item.querySelector(className).textContent =
-                  subArr[j].description.ceilling.substring(0, 31 - k * 5) +
-                  " ...";
+    if (res)
+      fixHomeProds(res).forEach((subArr, i) => {
+        const section = document.getElementById(`products${i + 1}`);
+        if (section?.querySelector(`#products-list`))
+          Array.from(getItems(section.querySelector(`#products-list`))).forEach(
+            (item, j) => {
+              if (item.querySelector("img")) {
+                item.querySelector("img").setAttribute("src", subArr[j].url);
               }
+              [
+                ".product__ceilling",
+                ".product__wall",
+                ".product__floor",
+              ].forEach((className, k) => {
+                if (item.querySelector(className)) {
+                  item.querySelector(className).textContent =
+                    subArr[j].description.ceilling.substring(0, 31 - k * 5) +
+                    " ...";
+                }
+              });
             }
           );
-        }
-      );
-    });
+      });
   });
 }
 async function setProductsSwiper() {
   await getImageData("products-home").then((res) => {
     fixHomeProds(res).forEach((subArr, i) => {
       const section = document.getElementById(`products${i + 1}`);
-      Array.from(getItems(section.querySelector(`#product-swiper`))).forEach(
-        (item, j) => {
-          if (item.querySelector("img")) {
-            item.querySelector("img").setAttribute("src", subArr[j].url);
-          }
-          [".product__ceilling", ".product__wall", ".product__floor"].forEach(
-            (className, k) => {
-              if (item.querySelector(className)) {
-                item.querySelector(className).textContent =
-                  subArr[j].description.ceilling.substring(0, 31 - k * 5) +
-                  " ...";
-              }
+      if (section?.querySelector(`#product-swiper`))
+        Array.from(getItems(section.querySelector(`#product-swiper`))).forEach(
+          (item, j) => {
+            if (item.querySelector("img")) {
+              item.querySelector("img").setAttribute("src", subArr[j].url);
             }
-          );
-        }
-      );
+            [".product__ceilling", ".product__wall", ".product__floor"].forEach(
+              (className, k) => {
+                if (item.querySelector(className)) {
+                  item.querySelector(className).textContent =
+                    subArr[j].description.ceilling.substring(0, 31 - k * 5) +
+                    " ...";
+                }
+              }
+            );
+          }
+        );
     });
   });
 }
@@ -132,7 +153,8 @@ function setPageText(language) {
   Object.keys(lan).forEach((key) => {
     if (!Array.isArray(lan[key])) {
       if (typeof lan[key] === "string") {
-        document.getElementById(key).textContent = lan[key];
+        if (document.getElementById(key))
+          document.getElementById(key).textContent = lan[key];
       }
     }
   });
