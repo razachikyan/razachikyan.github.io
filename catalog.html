@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header catalog__header">
       <div class="header__top">
         <div class="container flex flex-between">
           <div class="mobile__block mobile"></div>
@@ -101,10 +101,10 @@
         </div>
         <div class="header__bottom">
           <div class="container flex flex-between">
-            <div class="header__block"></div>
-            <nav class="header__nav">
+            <div class="header__block catalog__block"></div>
+            <nav class="header__nav catalog__nav">
               <div class="burger tablet" id="burger"></div>
-              <ul class="header__list hidden" id="burger-list">
+              <ul class="header__list" id="burger-list">
                 <li class="header__item" id="header.bottom.nav.services">
                   <a href="#services">Our Services</a>
                 </li>
@@ -130,12 +130,446 @@
       <section class="catalog section">
         <div class="container flex flex-between">
           <div class="catalog__filters">
-            <form class="filter__block filters__radio"></form>
-            <form class="filter__block filters__radio"></form>
-            <div class="filter__block"></div>
-            <div class="filter__block"></div>
+            <form class="filter__block filters__radio">
+              <label class="label" for="passenger-elevator">
+                <span class="custom__radio custom__radio-selected"></span>
+                <input type="radio" id="passenger-elevator" class="hidden" />
+                Passenger Elevator
+              </label>
+              <label class="label" for="freight-elevator">
+                <span class="custom__radio"></span>
+                <input type="radio" id="freight-elevator" class="hidden" />
+                Freight Elevator
+              </label>
+              <label class="label" for="bed-elevator">
+                <span class="custom__radio"></span>
+                <input type="radio" id="bed-elevator" class="hidden" />
+                Bed Elevator
+              </label>
+              <label class="label" for="buttons">
+                <span class="custom__radio"></span>
+                <input type="radio" id="buttons" class="hidden" />
+                Buttons
+              </label>
+            </form>
+            <form class="filter__block filters__checkbox">
+              <label class="label" for="passenger-elevator">
+                <span class="custom__checkbox custom__checkbox-checked"></span>
+                <input type="checkbox" id="passenger-elevator" class="hidden" />
+                Passenger Elevator
+              </label>
+              <label class="label" for="freight-elevator">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="freight-elevator" class="hidden" />
+                Freight Elevator
+              </label>
+              <label class="label" for="bed-elevator">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="bed-elevator" class="hidden" />
+                Bed Elevator
+              </label>
+              <label class="label" for="escalators">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="escalators" class="hidden" />
+                Escalators
+              </label>
+              <label class="label" for="autowalks">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="autowalks" class="hidden" />
+                Autowalks
+              </label>
+              <label class="label" for="lift-tables">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="lift-tables" class="hidden" />
+                Lift Tables
+              </label>
+              <label class="label" for="kitchen-elevators">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="kitchen-elevators" class="hidden" />
+                Kitchen elevators
+              </label>
+              <label class="label" for="construction-elevators">
+                <span class="custom__checkbox"></span>
+                <input
+                  type="checkbox"
+                  id="construction-elevators"
+                  class="hidden"
+                />
+                Construction elevators
+              </label>
+            </form>
+            <div class="filter__block price__block">
+              <div class="price__block">
+                <div class="rect"></div>
+                <span>Price</span>
+              </div>
+              <span class="color__name">Color</span>
+              <ul class="colors">
+                <li class="color black color-selected"></li>
+                <li class="color brown"></li>
+                <li class="color red"></li>
+                <li class="color yellow"></li>
+                <li class="color green"></li>
+              </ul>
+            </div>
+            <from class="filter__block">
+              <label class="label" for="bestsellers">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="bestsellers" class="hidden" />
+                Bestsellers
+              </label>
+              <label class="label" for="last-products">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" id="last-products" class="hidden" />
+                Last Products
+              </label>
+            </from>
           </div>
-          <div class="catalog__list"></div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img
+                src="./assets/images/image.png"
+                class="product__image1"
+                alt="product"
+              />
+              <div class="product__box">
+                <div class="product__flex">
+                  <h5 class="product__name">FJ-HD2</h5>
+                  <ul class="rating">
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                    <li class="star"></li>
+                  </ul>
+                </div>
+                <div class="product__descr">
+                  <div class="col">
+                    <h5 class="product__key">Ceilling:</h5>
+                    <p class="product__ceilling">
+                      Frosted stainless steel, mirror stain...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Car wall:</h5>
+                    <p class="product__wall">
+                      Frosted stainless steel, mirror...
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h5 class="product__key">Floor:</h5>
+                    <p class="product__floor">Frosted stainless steel...</p>
+                  </div>
+                  <a href="" class="product__more"> Read More </a>
+                </div>
+              </div>
+            </li>
+            <div class="pagination__list" id="pagination"></div>
+          </ul>
         </div>
       </section>
     </main>

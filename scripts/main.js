@@ -210,4 +210,45 @@ function fixHomeProds(res) {
   );
 }
 
+function createPagination(count) {
+  const pagination = document.getElementById("pagination");
+  const prev = document.createElement("div");
+  prev.classList.add("pagination__item");
+  prev.textContent = "<";
+  pagination.append(prev);
+  if (count <= 7) {
+    for (let i = 1; i <= count; ++i) {
+      const item = document.createElement("div");
+      item.classList.add("pagination__item");
+      if (i === 3) {
+        item.classList.add("pagination__item-selected");
+      }
+      item.textContent = i;
+      pagination.append(item);
+    }
+  } else {
+    for (let i = 1; i <= 7; ++i) {
+      const item = document.createElement("div");
+      item.classList.add("pagination__item");
+      if (i === 3) {
+        item.classList.add("pagination__item-selected");
+      }
+      item.textContent = i;
+      pagination.append(item);
+    }
+    const addition = document.createElement("div");
+    addition.classList.add("pagination__item");
+    addition.textContent = "...";
+    pagination.append(addition);
+    const last = document.createElement("div");
+    last.classList.add("pagination__item");
+    last.textContent = count;
+    pagination.append(last);
+  }
+  const next = document.createElement("div");
+  next.classList.add("pagination__item");
+  next.textContent = ">";
+  pagination.append(next);
+}
+createPagination(13);
 setPageText("en");
