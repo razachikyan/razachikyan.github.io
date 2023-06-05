@@ -130,9 +130,9 @@
       <section class="catalog section">
         <div class="container flex flex-between">
           <div class="catalog__filters">
-            <form class="filter__block filters__radio">
+            <form class="filter__block filters__radio" id="radio-form">
               <label class="label" for="passenger-elevator">
-                <span class="custom__radio custom__radio-selected"></span>
+                <span class="custom__radio"></span>
                 <input type="radio" id="passenger-elevator" class="hidden" />
                 Passenger Elevator
               </label>
@@ -152,7 +152,7 @@
                 Buttons
               </label>
             </form>
-            <form class="filter__block filters__checkbox">
+            <form class="filter__block filters__checkbox" id="checkbox-form">
               <label class="label" for="passenger-elevator">
                 <span class="custom__checkbox custom__checkbox-checked"></span>
                 <input type="checkbox" id="passenger-elevator" class="hidden" />
@@ -665,6 +665,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script type="module" src="./scripts/imagesScript.js" defer></script>
+    <script type="module" src="./scripts/catalog.js"></script>
     <script type="module" defer src="./scripts/main.js"></script>
   </body>
 </html>

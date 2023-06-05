@@ -2,6 +2,7 @@ import am from "../lang/am.json" assert { type: "json" };
 import ru from "../lang/ru.json" assert { type: "json" };
 import en from "../lang/en.json" assert { type: "json" };
 import { getImageData } from "./imagesScript.js";
+import { createPagination, RadioInput, CheckboxForm } from "./catalog.js";
 
 const starOn = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
 <path d="M16.4833 18L10.5397 15.0658L4.56336 17.9466L5.57574 11.5021L0.92749 6.82869L7.50252 5.77238L10.605 0L13.653 5.80439L20.2063 6.90338L15.5254 11.5448L16.4833 18Z" fill="#C89D66"/>
@@ -209,46 +210,7 @@ function fixHomeProds(res) {
       })
   );
 }
-
-function createPagination(count) {
-  const pagination = document.getElementById("pagination");
-  const prev = document.createElement("div");
-  prev.classList.add("pagination__item");
-  prev.textContent = "<";
-  pagination.append(prev);
-  if (count <= 7) {
-    for (let i = 1; i <= count; ++i) {
-      const item = document.createElement("div");
-      item.classList.add("pagination__item");
-      if (i === 3) {
-        item.classList.add("pagination__item-selected");
-      }
-      item.textContent = i;
-      pagination.append(item);
-    }
-  } else {
-    for (let i = 1; i <= 7; ++i) {
-      const item = document.createElement("div");
-      item.classList.add("pagination__item");
-      if (i === 3) {
-        item.classList.add("pagination__item-selected");
-      }
-      item.textContent = i;
-      pagination.append(item);
-    }
-    const addition = document.createElement("div");
-    addition.classList.add("pagination__item");
-    addition.textContent = "...";
-    pagination.append(addition);
-    const last = document.createElement("div");
-    last.classList.add("pagination__item");
-    last.textContent = count;
-    pagination.append(last);
-  }
-  const next = document.createElement("div");
-  next.classList.add("pagination__item");
-  next.textContent = ">";
-  pagination.append(next);
-}
 createPagination(13);
+RadioInput();
+CheckboxForm();
 setPageText("en");
