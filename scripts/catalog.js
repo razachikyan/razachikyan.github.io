@@ -10,9 +10,11 @@ export function CheckboxForm() {
         label.querySelector("input").checked = Boolean(
           !label.querySelector("input").checked
         );
-        label.querySelector("custom__checkbox").classList.contains(className)
-          ? label.querySelector("custom__checkbox").classList.add(className)
-          : label.querySelector("custom__checkbox").classList.remove(className);
+        label.querySelector(".custom__checkbox").classList.contains(className)
+          ? label.querySelector(".custom__checkbox").classList.add(className)
+          : label
+              .querySelector(".custom__checkbox")
+              .classList.remove(className);
       });
     });
   } else {
