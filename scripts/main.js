@@ -19,9 +19,8 @@ let languages = {
 };
 
 let ratingArr = document.querySelectorAll(".rating");
-const burger = document.getElementById("burger");
 const burgerMob = document.getElementById("burger-mobile");
-const burgerList = document.getElementById("burger-list");
+const burgerTab = document.getElementById("burger-tablet");
 const mainWorkImage = document.getElementById("main-work-image");
 const workImages = Array.from(document.querySelectorAll(".work__img"));
 const linkImage = document.getElementById("work-image-link");
@@ -30,7 +29,6 @@ const radioButtons = document.querySelectorAll(".radio");
 if (radioButtons.length && radioButtons.length > 0) {
   Array.from(radioButtons).forEach((btn) => {
     btn.onchange = () => {
-      debugger;
       Array.from(radioButtons).forEach((btn) => {
         const custom = btn?.parentNode?.querySelector(".custom__radio");
         btn.checked
@@ -43,24 +41,21 @@ if (radioButtons.length && radioButtons.length > 0) {
 
 workImages.pop();
 
-[(burger, burgerMob)].forEach((item) => {
-  item.addEventListener("click", () => {
-    burgerList.classList.add("active");
-    burgerList.classList.remove("hidden");
-  });
-});
-
-document.getElementById("burger-list").addEventListener("click", (event) => {
-  if (event.target.classList.contains("close")) {
-    burgerList.classList.remove("active");
-    burgerList.classList.add("hidden");
+burgerTab.addEventListener("click", () => {
+  if (burgerTab.querySelector("ul")) {
+    burgerTab.innerHTML = null;
+  } else {
+    burgerTab.append(createTabletMenu());
   }
 });
 
-setProducts();
-setStars();
-setProductsSwiper();
-setGalleryPictures();
+burgerMob.addEventListener("click", () => {
+  if (burgerMob.querySelector("ul")) {
+    burgerMob.innerHTML = null;
+  } else {
+    burgerMob.append(createMobiletMenu());
+  }
+});
 
 async function setGalleryPictures() {
   await getImageData("work-gallery").then((res) => {
@@ -210,7 +205,54 @@ function fixHomeProds(res) {
       })
   );
 }
+
+function createTabletMenu() {
+  const box = document.createElement("ul");
+  box.classList.add("tablet-menu");
+  [
+    { title: "Our Services", href: "#" },
+    { title: "Our Partners", href: "#partners" },
+    { title: "Products", href: "#products1" },
+    { title: "About Us", href: "#about" },
+    { title: "Gallery", href: "#gallery" },
+  ].forEach((obj) => {
+    const item = document.createElement("li");
+    item.classList.add("tablet-item");
+    const link = document.createElement("a");
+    link.href = obj.href;
+    link.textContent = obj.title;
+    item.append(link);
+    box.append(item);
+  });
+  return box;
+}
+
+function createMobiletMenu() {
+  const box = document.createElement("ul");
+  box.classList.add("mobile-menu");
+  [
+    { title: "Our Services", href: "#" },
+    { title: "Our Partners", href: "#partners" },
+    { title: "Products", href: "#products1" },
+    { title: "About Us", href: "#about" },
+    { title: "Gallery", href: "#gallery" },
+  ].forEach((obj) => {
+    const item = document.createElement("li");
+    item.classList.add("mobile-item");
+    const link = document.createElement("a");
+    link.href = obj.href;
+    link.textContent = obj.title;
+    item.append(link);
+    box.append(item);
+  });
+  return box;
+}
+
 createPagination(13);
 RadioInput();
 CheckboxForm();
 setPageText("en");
+setProducts();
+setStars();
+setProductsSwiper();
+setGalleryPictures();
