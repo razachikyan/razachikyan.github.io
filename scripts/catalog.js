@@ -1,96 +1,41 @@
-const radioForm = document.getElementById("radio-form");
-const checkboxForm = document.getElementById("checkbox-form");
+"use strict";
 
-export function CheckboxForm() {
-  if (checkboxForm) {
-    const labels = Array.from(checkboxForm.querySelectorAll("label"));
-    labels.forEach((label) => {
-      label.addEventListener("click", () => {
-        let className = "custom__checkbox-checked";
-        label.querySelector("input").checked = Boolean(
-          !label.querySelector("input").checked
-        );
-        label.querySelector(".custom__checkbox").classList.contains(className)
-          ? label.querySelector(".custom__checkbox").classList.add(className)
-          : label
-              .querySelector(".custom__checkbox")
-              .classList.remove(className);
-      });
-    });
-  } else {
-    return null;
-  }
-}
+const initialState = {
+  products: [],
+};
 
-export function RadioInput() {
-  if (radioForm) {
-    const labels = Array.from(radioForm.querySelectorAll("label"));
-    Array.from(labels).forEach((label, i) => {
-      label.addEventListener("click", () => {
-        debugger;
-        labels.map((item, ind) => {
-          if (ind === i) {
-            item.querySelector("input").checked = true;
-            item
-              .querySelector(".custom__radio")
-              .classList.add("custom__radio-selected");
-          } else {
-            item.querySelector("input").checked = false;
-            if (
-              item
-                .querySelector(".custom__radio")
-                .classList.contains("custom__radio-selected")
-            )
-              item
-                .querySelector(".custom__radio")
-                .classList.remove("custom__radio-selected");
-          }
-        });
-      });
-    });
-  } else {
-    return null;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ReduxActions.FETCHED_PRODUCTS:
+      return { ...state, products: action.payload };
+    default:
+      return state;
   }
-}
+};
 
-export function createPagination(count) {
-  const pagination = document.getElementById("pagination");
-  if (!pagination) return null;
-  const prev = document.createElement("div");
-  prev.classList.add("pagination__item");
-  prev.textContent = "<";
-  pagination.append(prev);
-  if (count <= 7) {
-    for (let i = 1; i <= count; ++i) {
-      const item = document.createElement("div");
-      item.classList.add("pagination__item");
-      if (i === 3) {
-        item.classList.add("pagination__item-selected");
-      }
-      item.textContent = i;
-      pagination.append(item);
-    }
-  } else {
-    for (let i = 1; i <= 7; ++i) {
-      const item = document.createElement("div");
-      item.classList.add("pagination__item");
-      if (i === 3) {
-        item.classList.add("pagination__item-selected");
-      }
-      item.textContent = i;
-      pagination.append(item);
-    }
-    const addition = document.createElement("div");
-    addition.classList.add("pagination__item");
-    addition.textContent = "...";
-    pagination.append(addition);
-    const last = document.createElement("div");
-    last.classList.add("pagination__item");
-    last.textContent = count;
-    pagination.append(last);
+const store = Redux.createStore(reducer);
+
+store.subscribe(() => {
+  const state = store.getState();
+
+  if (state.products.length === 0) {
+    return;
   }
-  const next = document.createElement("div");
-  next.classList.add("pagination__item");
-  next.textContent = ">";
-  pagination.append(next);
-}
+
+  const catalogList = document.querySelector(".catalog__list");
+
+  state.products.forEach(p => {
+    catalogList.insertAdjacentHTML("beforeend", RenderFunctions.renderCatalogProduct({
+      id: p.id,
+      server: p.server,
+      secret: p.secret,
+      farm: p.farm,
+      description: p.description._content,
+    }));
+  });
+});
+
+window.addEventListener("load", async () => {
+  const data = await FlickrUtils.getUserImages({ user_id: FLICKR_USER_ID, api_key: FLICKR_API_KEY });
+  store.dispatch({ type: ReduxActions.FETCHED_PRODUCTS, payload: data.photos.photo });
+});

@@ -402,7 +402,7 @@ p {
 .product__image1 {
   height: 484px;
   align-self: center;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 }
 
 .product__name {
@@ -756,6 +756,10 @@ p {
 .catalog__item {
   max-width: 320px;
   padding: 30px;
+}
+
+.catalog__item .product__image1 {
+  object-fit: cover;
 }
 
 .pagination__list {
