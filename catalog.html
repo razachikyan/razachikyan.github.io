@@ -130,100 +130,91 @@
       <section class="catalog section">
         <div class="container flex flex-between">
           <div class="catalog__filters">
-            <form class="filter__block filters__radio" id="radio-form">
+<!--            <form class="filter__block filters__radio" id="radio-form">-->
+<!--              <label class="label" for="passenger-elevator">-->
+<!--                <span class="custom__radio"></span>-->
+<!--                <input type="radio" id="passenger-elevator" class="hidden" />-->
+<!--                Passenger Elevator-->
+<!--              </label>-->
+<!--              <label class="label" for="freight-elevator">-->
+<!--                <span class="custom__radio"></span>-->
+<!--                <input type="radio" id="freight-elevator" class="hidden" />-->
+<!--                Freight Elevator-->
+<!--              </label>-->
+<!--              <label class="label" for="bed-elevator">-->
+<!--                <span class="custom__radio"></span>-->
+<!--                <input type="radio" id="bed-elevator" class="hidden" />-->
+<!--                Bed Elevator-->
+<!--              </label>-->
+<!--              <label class="label" for="buttons">-->
+<!--                <span class="custom__radio"></span>-->
+<!--                <input type="radio" id="buttons" class="hidden" />-->
+<!--                Buttons-->
+<!--              </label>-->
+<!--            </form>-->
+            <form class="filter__block filters__checkbox" id="elevator-types-form">
               <label class="label" for="passenger-elevator">
-                <span class="custom__radio"></span>
-                <input type="radio" id="passenger-elevator" class="hidden" />
+                <span class="custom__checkbox"></span> <!-- custom__checkbox-checked -->
+                <input type="checkbox" value="0" id="passenger-elevator" name="passenger-elevator" class="hidden" />
                 Passenger Elevator
               </label>
-              <label class="label" for="freight-elevator">
-                <span class="custom__radio"></span>
-                <input type="radio" id="freight-elevator" class="hidden" />
-                Freight Elevator
-              </label>
-              <label class="label" for="bed-elevator">
-                <span class="custom__radio"></span>
-                <input type="radio" id="bed-elevator" class="hidden" />
-                Bed Elevator
-              </label>
-              <label class="label" for="buttons">
-                <span class="custom__radio"></span>
-                <input type="radio" id="buttons" class="hidden" />
-                Buttons
-              </label>
-            </form>
-            <form class="filter__block filters__checkbox" id="checkbox-form">
-              <label class="label" for="passenger-elevator">
-                <span class="custom__checkbox custom__checkbox-checked"></span>
-                <input type="checkbox" id="passenger-elevator" class="hidden" />
-                Passenger Elevator
+              <label class="label" for="observation-elevator">
+                <span class="custom__checkbox"></span>
+                <input type="checkbox" value="1" id="observation-elevator" name="observation-elevator" class="hidden" />
+                Observation Elevator
               </label>
               <label class="label" for="freight-elevator">
                 <span class="custom__checkbox"></span>
-                <input type="checkbox" id="freight-elevator" class="hidden" />
+                <input type="checkbox" value="2" id="freight-elevator" name="freight-elevator" class="hidden" />
                 Freight Elevator
               </label>
-              <label class="label" for="bed-elevator">
+              <label class="label" for="car-elevator">
                 <span class="custom__checkbox"></span>
-                <input type="checkbox" id="bed-elevator" class="hidden" />
-                Bed Elevator
+                <input type="checkbox" value="3" id="car-elevator" name="car-elevator" class="hidden" />
+                Car Elevator
               </label>
-              <label class="label" for="escalators">
+              <label class="label" for="villa-elevator">
                 <span class="custom__checkbox"></span>
-                <input type="checkbox" id="escalators" class="hidden" />
-                Escalators
+                <input type="checkbox" value="4" id="villa-elevator" name="villa-elevator" class="hidden" />
+                Villa Elevator
               </label>
-              <label class="label" for="autowalks">
+              <label class="label" for="escalator">
                 <span class="custom__checkbox"></span>
-                <input type="checkbox" id="autowalks" class="hidden" />
-                Autowalks
+                <input type="checkbox" value="5" id="escalator" name="escalator" class="hidden" />
+                Escalator
               </label>
-              <label class="label" for="lift-tables">
+              <label class="label" for="moving-walk">
                 <span class="custom__checkbox"></span>
-                <input type="checkbox" id="lift-tables" class="hidden" />
-                Lift Tables
-              </label>
-              <label class="label" for="kitchen-elevators">
-                <span class="custom__checkbox"></span>
-                <input type="checkbox" id="kitchen-elevators" class="hidden" />
-                Kitchen elevators
-              </label>
-              <label class="label" for="construction-elevators">
-                <span class="custom__checkbox"></span>
-                <input
-                  type="checkbox"
-                  id="construction-elevators"
-                  class="hidden"
-                />
-                Construction elevators
+                <input type="checkbox" value="6" id="moving-walk" name="moving-walk" class="hidden" />
+                Moving Walk
               </label>
             </form>
-            <div class="filter__block price__block">
-              <div class="price__block">
-                <div class="rect"></div>
-                <span>Price</span>
-              </div>
-              <span class="color__name">Color</span>
-              <ul class="colors">
-                <li class="color black color-selected"></li>
-                <li class="color brown"></li>
-                <li class="color red"></li>
-                <li class="color yellow"></li>
-                <li class="color green"></li>
-              </ul>
-            </div>
-            <from class="filter__block">
-              <label class="label" for="bestsellers">
-                <span class="custom__checkbox"></span>
-                <input type="checkbox" id="bestsellers" class="hidden" />
-                Bestsellers
-              </label>
-              <label class="label" for="last-products">
-                <span class="custom__checkbox"></span>
-                <input type="checkbox" id="last-products" class="hidden" />
-                Last Products
-              </label>
-            </from>
+<!--            <div class="filter__block price__block">-->
+<!--              <div class="price__block">-->
+<!--                <div class="rect"></div>-->
+<!--                <span>Price</span>-->
+<!--              </div>-->
+<!--              <span class="color__name">Color</span>-->
+<!--              <ul class="colors">-->
+<!--                <li class="color black color-selected"></li>-->
+<!--                <li class="color brown"></li>-->
+<!--                <li class="color red"></li>-->
+<!--                <li class="color yellow"></li>-->
+<!--                <li class="color green"></li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <from class="filter__block">-->
+<!--              <label class="label" for="bestsellers">-->
+<!--                <span class="custom__checkbox"></span>-->
+<!--                <input type="checkbox" id="bestsellers" class="hidden" />-->
+<!--                Bestsellers-->
+<!--              </label>-->
+<!--              <label class="label" for="last-products">-->
+<!--                <span class="custom__checkbox"></span>-->
+<!--                <input type="checkbox" id="last-products" class="hidden" />-->
+<!--                Last Products-->
+<!--              </label>-->
+<!--            </from>-->
           </div>
           <ul class="catalog__list">
 <!--            <div class="pagination__list" id="pagination"></div>-->

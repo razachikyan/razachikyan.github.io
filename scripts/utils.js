@@ -22,12 +22,7 @@ class FlickrUtils {
 }
 
 class RenderFunctions {
-    static renderCatalogProduct({ id, server, secret, farm, description }) {
-        const imageUrl = FlickrUtils.getImageFullUrl({ id, server, secret, farm });
-        const parsedDescription = JSON.parse(description.replaceAll(`&quot;`, "\""));
-
-        console.log(id, parsedDescription);
-
+    static renderCatalogProduct({ info, imageUrl }) {
         return `
              <li class="catalog__item">
               <img
@@ -37,7 +32,7 @@ class RenderFunctions {
               />
               <div class="product__box">
                 <div class="product__flex">
-                  <h5 class="product__name">${parsedDescription.name}</h5>
+                  <h5 class="product__name">${info.name}</h5>
                   <ul class="rating">
                     <li class="star"></li>
                     <li class="star"></li>

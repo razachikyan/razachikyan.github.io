@@ -615,6 +615,7 @@ p {
   display: flex;
   align-items: center;
   column-gap: 12px;
+  cursor: pointer;
 }
 
 .custom__radio {
