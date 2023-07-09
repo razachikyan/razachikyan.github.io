@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0327248-8ce7-4e8b-b656-8ddc7fefd8ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/aboutus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/general.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/partner1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/partner2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/partner3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/partner4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/partner5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/phone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/am.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/catalog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/imagesScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/redux.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ReVdc1ZuYBMvO9CW6YOFxjxPeg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/amatinya/Desktop/hrazdan-lift",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0327248-8ce7-4e8b-b656-8ddc7fefd8ab" name="Changes" comment="" />
+      <created>1687610621590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687610621590</updated>
+      <workItem from="1687610622669" duration="3326000" />
+      <workItem from="1687846267155" duration="8779000" />
+      <workItem from="1687886784281" duration="588000" />
+      <workItem from="1687887594054" duration="607000" />
+      <workItem from="1688036812818" duration="36000" />
+      <workItem from="1688203157023" duration="5668000" />
+      <workItem from="1688228258754" duration="1574000" />
+      <workItem from="1688321410261" duration="101000" />
+      <workItem from="1688897529904" duration="355000" />
+      <workItem from="1688902349155" duration="89000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
