@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0327248-8ce7-4e8b-b656-8ddc7fefd8ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Mardoto-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/aboutus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/general.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partner1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partner2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partner3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partner4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/partner5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/phone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lang/am.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lang/en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lang/ru.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/catalog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/imagesScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/redux.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" />
-    </list>
+    <list default="true" id="e0327248-8ce7-4e8b-b656-8ddc7fefd8ab" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +52,7 @@
       <workItem from="1688228258754" duration="1574000" />
       <workItem from="1688321410261" duration="101000" />
       <workItem from="1688897529904" duration="355000" />
-      <workItem from="1688902349155" duration="89000" />
+      <workItem from="1688902349155" duration="437000" />
     </task>
     <servers />
   </component>
