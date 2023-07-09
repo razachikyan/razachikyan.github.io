@@ -128,7 +128,7 @@
     </header>
     <main class="main">
       <section class="catalog section">
-        <div class="container flex flex-between">
+        <div class="container catalog-container">
           <div class="catalog__filters">
 <!--            <form class="filter__block filters__radio" id="radio-form">-->
 <!--              <label class="label" for="passenger-elevator">-->
@@ -153,40 +153,41 @@
 <!--              </label>-->
 <!--            </form>-->
             <form class="filter__block filters__checkbox" id="elevator-types-form">
+              <h3 class="title">Types</h3>
               <label class="label" for="passenger-elevator">
                 <span class="custom__checkbox"></span> <!-- custom__checkbox-checked -->
                 <input type="checkbox" value="0" id="passenger-elevator" name="passenger-elevator" class="hidden" />
-                Passenger Elevator
+                <span class="checkbox-label">Passenger Elevator</span>
               </label>
               <label class="label" for="observation-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="1" id="observation-elevator" name="observation-elevator" class="hidden" />
-                Observation Elevator
+                <span class="checkbox-label">Observation Elevator</span>
               </label>
               <label class="label" for="freight-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="2" id="freight-elevator" name="freight-elevator" class="hidden" />
-                Freight Elevator
+                <span class="checkbox-label">Freight Elevator</span>
               </label>
               <label class="label" for="car-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="3" id="car-elevator" name="car-elevator" class="hidden" />
-                Car Elevator
+                <span class="checkbox-label">Car Elevator</span>
               </label>
               <label class="label" for="villa-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="4" id="villa-elevator" name="villa-elevator" class="hidden" />
-                Villa Elevator
+                <span class="checkbox-label">Villa Elevator</span>
               </label>
               <label class="label" for="escalator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="5" id="escalator" name="escalator" class="hidden" />
-                Escalator
+                <span class="checkbox-label">Escalator</span>
               </label>
               <label class="label" for="moving-walk">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="6" id="moving-walk" name="moving-walk" class="hidden" />
-                Moving Walk
+                <span class="checkbox-label">Moving Walk</span>
               </label>
             </form>
 <!--            <div class="filter__block price__block">-->

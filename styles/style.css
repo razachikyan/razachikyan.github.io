@@ -149,7 +149,7 @@ p {
 }
 
 .section {
-  padding: 132px 0;
+  padding: 92px 0;
 }
 
 .container {
@@ -402,13 +402,15 @@ p {
 .product__image1 {
   height: 484px;
   align-self: center;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .product__name {
   font-size: 24px;
   line-height: 28px;
   color: var(--text-color);
+  white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .rating {
@@ -436,6 +438,10 @@ p {
   gap: 8px;
 }
 
+.product__descr .show-more-btn {
+  margin-top: 12px;
+}
+
 .col {
   display: flex;
   gap: 12px;
@@ -446,6 +452,7 @@ p {
   font-size: 16px;
   line-height: 150%;
   color: var(--text-color);
+  white-space: nowrap;
 }
 
 .product__ceilling,
@@ -456,6 +463,9 @@ p {
   font-size: 16px;
   line-height: 150%;
   color: var(--body-text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product__more {
@@ -582,7 +592,17 @@ p {
 */
 
 .catalog {
-  padding-bottom: 250px;
+  padding-bottom: 48px;
+}
+
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#elevator-types-form .title {
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .catalog__block {
@@ -751,7 +771,7 @@ p {
   width: 75%;
   max-width: 1020px;
   row-gap: 50px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .catalog__item {
@@ -819,7 +839,7 @@ p {
 .footer__bottom {
   display: flex;
   justify-content: center;
-  padding: 6px 0 8px 0;
+  padding: 14px 0;
 }
 
 .bottom__text {
@@ -832,10 +852,6 @@ p {
 @media (max-width: 1350px) {
   .product__item {
     padding: 10px;
-  }
-
-  .product__box {
-    padding: 30px;
   }
 }
 
@@ -852,6 +868,30 @@ p {
     padding: 70px 49px;
     font-size: 65px;
     line-height: 65px;
+  }
+
+  .catalog-container {
+    flex-direction: column;
+  }
+
+  .catalog__list {
+    width: 100%;
+  }
+  .catalog__filters {
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  #elevator-types-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: unset;
+    flex-direction: row;
+    column-gap: 32px;
+  }
+
+  #elevator-types-form .title {
+    width: 100%;
   }
 }
 
@@ -1115,8 +1155,12 @@ p {
     width: 100%;
   }
 
-  swiper-side {
+  .swiper-side {
     width: 75%;
+  }
+
+  #elevator-types-form {
+    flex-direction: column;
   }
 }
 
@@ -1228,10 +1272,6 @@ p {
 
   .product__swiper > swiper-slide {
     padding: 0;
-  }
-
-  .product__name {
-    white-space: nowrap;
   }
 
   .product__image1 {

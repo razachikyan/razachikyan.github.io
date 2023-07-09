@@ -58,7 +58,8 @@ class RenderFunctions {
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel...</p>
                   </div>
-                  <a href="" class="product__more"> Read More </a>
+<!--                  <a href="" class="product__more"> Read More </a>-->
+                      <button class="btn general__btn show-more-btn">Show More</button>
                 </div>
               </div>
             </li>
