@@ -921,8 +921,9 @@ p {
 
 #product-modal .content .product-info .description {
   width: 100%;
-  /*border: 1px solid red;*/
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #product-modal .content .product-info .description .name {
@@ -938,9 +939,9 @@ p {
   padding-top: 16px;
   flex-direction: column;
   gap: 16px;
-  /*border: 2px solid red;*/
   max-height: calc(100% - 70px);
   overflow-y: auto;
+  flex-grow: 1;
 }
 
 #product-modal .content .product-info .description .properties::-webkit-scrollbar,
@@ -969,6 +970,12 @@ p {
   font-weight: 500;
   line-height: 150%;
   white-space: nowrap;
+}
+
+#product-modal .content .product-info .description #product-modal-qr-code {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #product-modal .content .product-info .description .properties .property .property-content {

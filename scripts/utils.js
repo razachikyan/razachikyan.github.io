@@ -75,6 +75,7 @@ class RenderFunctions {
                             <p class="property-content">${p.content}</p>
                         </div>`
                     )).join("")}
+                    <div id="product-modal-qr-code"></div>
                 </div>
             </div>
             

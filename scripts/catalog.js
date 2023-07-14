@@ -4,8 +4,8 @@ const initialState = {
   products: [],
   activeElevatorTypes: [],
   productModal: {
-    isOpen: true, // false
-    productId: "53005295793", // null
+    isOpen: false, // false
+    productId: null,
   },
 };
 
@@ -62,6 +62,7 @@ store.subscribe(() => {
     });
     $modalCloseBtn.addEventListener("click", () => store.dispatch({ type: ReduxActions.CLOSE_PRODUCT_MODAL }));
     const product = state.products.find(p => p.id === state.productModal.productId);
+    const productDetails = JSON.parse(product.description._content.replaceAll(`&quot;`, "\""))
     if (product) {
       $productInfo.innerHTML = RenderFunctions.renderProductModal({
         imageUrl: FlickrUtils.getImageFullUrl({
@@ -70,8 +71,20 @@ store.subscribe(() => {
           secret: product.secret,
           farm: product.farm
         }),
-        info: JSON.parse(product.description._content.replaceAll(`&quot;`, "\"")),
+        info: productDetails,
       });
+      // Generate QR code
+      if ("3d-view-link" in productDetails) {
+        const $qrWrapper = document.querySelector("#product-modal-qr-code")
+        if ($qrWrapper) {
+          new QRCode($qrWrapper, {
+            text: productDetails["3d-view-link"],
+            width: 119,
+            height: 119,
+            correctLevel : QRCode.CorrectLevel.L
+          });
+        }
+      }
     }
   } else {
     $modal.style.display = "none";
