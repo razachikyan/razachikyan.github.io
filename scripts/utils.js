@@ -22,14 +22,10 @@ class FlickrUtils {
 }
 
 class RenderFunctions {
-    static renderCatalogProduct({ info, imageUrl }) {
+    static renderCatalogProduct({ info, imageUrl, id }) {
         return `
              <li class="catalog__item">
-              <img
-                src="${imageUrl}"
-                class="product__image1"
-                alt="product"
-              />
+              <img src="${imageUrl}" class="product__image1" alt="product" />
               <div class="product__box">
                 <div class="product__flex">
                   <h5 class="product__name">${info.name}</h5>
@@ -58,11 +54,30 @@ class RenderFunctions {
                     <h5 class="product__key">Floor:</h5>
                     <p class="product__floor">Frosted stainless steel...</p>
                   </div>
-<!--                  <a href="" class="product__more"> Read More </a>-->
-                      <button class="btn general__btn show-more-btn">Show More</button>
+                      <button class="btn general__btn show-more-btn" data-product-id=${id}>Show More</button>
                 </div>
               </div>
             </li>
+        `;
+    }
+
+    static renderProductModal({ info, imageUrl }) {
+        return `
+            <div class="image-container">
+                <img src=${imageUrl} alt=${info.name} class="product-image" />
+            </div>
+            <div class="description">
+                <h2 class="name">${info.name}</h2>
+                <div class="properties">
+                    ${info.properties.map(p => (
+                        `<div class="property">
+                            <h4 class="label">${p.label}:</h4>
+                            <p class="property-content">${p.content}</p>
+                        </div>`
+                    )).join("")}
+                </div>
+            </div>
+            
         `;
     }
 }

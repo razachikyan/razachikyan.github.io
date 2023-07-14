@@ -106,19 +106,10 @@
               <div class="burger tablet" id="burger"></div>
               <ul class="header__list" id="burger-list">
                 <li class="header__item" id="header.bottom.nav.services">
-                  <a href="#services">Our Services</a>
+                  <a href="./index.html">Home</a>
                 </li>
-                <li class="header__item" id="header.bottom.nav.partners">
-                  <a href="#partners">Our Partners</a>
-                </li>
-                <li class="header__item" id="header.bottom.nav.products">
-                  <a href="#products">Products</a>
-                </li>
-                <li class="header__item" id="header.bottom.nav.about">
-                  <a href="#about">About Us</a>
-                </li>
-                <li class="header__item" id="header.bottom.nav.gallery">
-                  Gallery
+                <li class="header__item active" id="header.bottom.nav.partners">
+                  <a href="./catalog.html">Catalog</a>
                 </li>
               </ul>
             </nav>
@@ -310,9 +301,20 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span class="bottom_text">Copyright 2023</span>
+        <span class="bottom_text">Copyright <span id="copyright-year"></span></span>
       </div>
     </footer>
+    <div id="product-modal">
+      <div class="content">
+        <button class="close-btn">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L21.5 21.5" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 21.5L21.5 1" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="product-info"></div>
+      </div>
+    </div>
 <!--    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>-->
 <!--    <script type="module" src="./scripts/imagesScript.js" defer></script>-->
     <script src="./scripts/redux.js"></script>
