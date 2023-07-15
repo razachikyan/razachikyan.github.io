@@ -1,11 +1,12 @@
 class FlickrUtils {
-    static async getUserImages({ api_key, user_id,  }) {
+    static async getUserImages({ api_key, user_id, photoset_id }) {
         try {
             const params = new URLSearchParams({
                 api_key,
                 user_id,
+                photoset_id,
                 format: "json",
-                method: "flickr.people.getPhotos",
+                method: "flickr.photosets.getPhotos", // flickr.people.getPhotos
                 nojsoncallback: 1,
                 extras: "description",
             });
@@ -23,6 +24,8 @@ class FlickrUtils {
 
 class RenderFunctions {
     static renderCatalogProduct({ info, imageUrl, id }) {
+        const { searchParams: params } = new URL(document.location);
+        const selectedLanguage = Object.values(AppLanguages).includes(params.get("lang")) ? params.get("lang") : AppLanguages.HY;
         return `
              <li class="catalog__item">
               <img src="${imageUrl}" class="product__image1" alt="product" />
@@ -38,23 +41,15 @@ class RenderFunctions {
                   </ul>
                 </div>
                 <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                      <button class="btn general__btn show-more-btn" data-product-id=${id}>Show More</button>
+                    ${info.properties.map(p => (
+                      `<div class="col">
+                            <h5 class="product__key">${p.label[selectedLanguage]}:</h5>
+                            <p class="product__wall">${p.content[selectedLanguage]}</p>
+                        </div>`
+                    )).join("")}
+                    <button data-lang="en" class="btn general__btn show-more-btn hidden-as-language" data-product-id=${id}>Show More</button>
+                    <button data-lang="ru" class="btn general__btn show-more-btn hidden-as-language" data-product-id=${id}>Показать больше</button>
+                    <button data-lang="hy" class="btn general__btn show-more-btn hidden-as-language" data-product-id=${id}>Ավելին</button>
                 </div>
               </div>
             </li>
@@ -62,6 +57,8 @@ class RenderFunctions {
     }
 
     static renderProductModal({ info, imageUrl }) {
+        const { searchParams: params } = new URL(document.location);
+        const selectedLanguage = Object.values(AppLanguages).includes(params.get("lang")) ? params.get("lang") : AppLanguages.HY;
         return `
             <div class="image-container">
                 <img src=${imageUrl} alt=${info.name} class="product-image" />
@@ -71,8 +68,8 @@ class RenderFunctions {
                 <div class="properties">
                     ${info.properties.map(p => (
                         `<div class="property">
-                            <h4 class="label">${p.label}:</h4>
-                            <p class="property-content">${p.content}</p>
+                            <h4 class="label">${p.label[selectedLanguage]}:</h4>
+                            <p class="property-content">${p.content[selectedLanguage]}</p>
                         </div>`
                     )).join("")}
                     <div id="product-modal-qr-code"></div>

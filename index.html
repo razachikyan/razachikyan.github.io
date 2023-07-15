@@ -24,11 +24,39 @@
               hrazdanverelak@gmail.com
             </a>
           </div>
-
           <div class="header__contact" id="header.top.phone">
             <img src="./assets/images/phone.svg" />
             <a href="tel:+37493-803-592" class="header__number">093 803592</a>
             <a href="tel:+37495-803-592" class="header__number">095 803592</a>
+          </div>
+          <div class="header__languages">
+            <a href="?lang=en" title="English">
+              <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 640 420" width="24" height="18">
+                <path fill="#bd3d44" d="M0 0h640v480H0"/>
+                <path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/>
+                <path fill="#192f5d" d="M0 0h364.8v258.5H0"/>
+                <marker id="a" markerHeight="30" markerWidth="30">
+                  <path fill="#fff" d="m14 0 9 27L0 10h28L5 27z"/>
+                </marker>
+                <path fill="none" marker-mid="url(#a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60L0 0"/>
+              </svg>
+            </a>
+            <a href="?lang=hy" title="Հայերեն">
+              <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-am" viewBox="0 0 640 420" width="24" height="18">
+                <path fill="#d90012" d="M0 0h640v160H0z"/>
+                <path fill="#0033a0" d="M0 160h640v160H0z"/>
+                <path fill="#f2a800" d="M0 320h640v160H0z"/>
+              </svg>
+            </a>
+            <a href="?lang=ru" title="Русский">
+              <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ru" viewBox="0 0 640 420" width="24" height="18">
+                <g fill-rule="evenodd" stroke-width="1pt">
+                  <path fill="#fff" d="M0 0h640v480H0z"/>
+                  <path fill="#0039a6" d="M0 160h640v320H0z"/>
+                  <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="header__bottom">
@@ -37,11 +65,23 @@
             <nav class="header__nav">
               <div class="burger tablet" id="burger-tablet"></div>
               <ul class="header__list" id="tablet-list">
-                <li class="header__item active" id="header.bottom.nav.services">
-                  <a href="./index.html">Home</a>
+                <li data-lang="en" class="header__item active hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./index.html?lang=en">Home</a>
                 </li>
-                <li class="header__item" id="header.bottom.nav.services">
-                  <a href="./catalog.html">Catalog</a>
+                <li data-lang="ru" class="header__item active hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./index.html?lang=ru">Главная</a>
+                </li>
+                <li data-lang="hy" class="header__item active hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./index.html?lang=hy">Գլխավոր</a>
+                </li>
+                <li data-lang="en" class="header__item hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./catalog.html?lang=en">Catalog</a>
+                </li>
+                <li data-lang="ru" class="header__item hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./catalog.html?lang=ru">Каталог</a>
+                </li>
+                <li data-lang="hy" class="header__item hidden-as-language" id="header.bottom.nav.services">
+                  <a href="./catalog.html?lang=hy">Կատալօգ</a>
                 </li>
               </ul>
             </nav>
@@ -53,14 +93,32 @@
       <section class="general">
         <div class="container">
           <div class="general__block">
-            <h2 class="general__title" id="main.general.title">
+            <h2 class="general__title hidden-as-language" id="main.general.title" data-lang="en">
               Value for money and security
             </h2>
-            <p class="general__descr" id="main.general.description">
+            <h2 class="general__title hidden-as-language" id="main.general.title" data-lang="hy">
+              Արժեք փողի և անվտանգության համար
+            </h2>
+            <h2 class="general__title hidden-as-language" id="main.general.title" data-lang="ru">
+              Соотношение цены и качества и безопасность
+            </h2>
+            <p class="general__descr hidden-as-language" id="main.general.description" data-lang="en">
               Maximize your investment: Achieve optimal value for money and peace of mind with our solutions. Prioritizing your safety and budgetary needs
             </p>
-            <a href="./catalog.html" class="btn general__btn" id="main.general.button">
+            <p class="general__descr hidden-as-language" id="main.general.description" data-lang="hy">
+              Առավելագույնի հասցրեք ձեր ներդրումները. մեր լուծումներով հասեք գնի և կատարողականի օպտիմալ հարաբերակցության և մտքի խաղաղության: Ձեր անվտանգության և բյուջեի կարիքների առաջնահերթությունը
+            </p>
+            <p class="general__descr hidden-as-language" id="main.general.description" data-lang="ru">
+              Максимизируйте свои инвестиции: Достигайте оптимального соотношения цены и качества и душевного спокойствия с помощью наших решений. Определение приоритетов вашей безопасности и бюджетных потребностей
+            </p>
+            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="en">
               Go to the Products
+            </a>
+            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="ru">
+              Перейдите к разделу "Продукты"
+            </a>
+            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="hy">
+              Անցեք "Ապրանքներ"բաժին
             </a>
           </div>
         </div>
@@ -68,11 +126,23 @@
       <section class="offer section">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title offer__title" id="main.offer.title">
+            <h2 data-lang="en" class="section__title offer__title hidden-as-language" id="main.offer.title">
               We Offer
             </h2>
-            <p class="section__descr" id="main.offer.description">
+            <h2 data-lang="ru" class="section__title offer__title hidden-as-language" id="main.offer.title">
+              Мы предлагаем
+            </h2>
+            <h2 data-lang="hy" class="section__title offer__title hidden-as-language" id="main.offer.title">
+              Մենք առաջարկում ենք
+            </h2>
+            <p data-lang="en" class="section__descr hidden-as-language" id="main.offer.description">
               We offer a comprehensive selection of top-quality elevators, ensuring unmatched variety and reliability for all your vertical transportation needs
+            </p>
+            <p data-lang="ru" class="section__descr hidden-as-language" id="main.offer.description">
+              Мы предлагаем широкий выбор высококачественных лифтов, обеспечивающих непревзойденное разнообразие и надежность для всех ваших потребностей в вертикальной транспортировке
+            </p>
+            <p data-lang="hy" class="section__descr hidden-as-language" id="main.offer.description">
+              Մենք առաջարկում ենք բարձրորակ վերելակների լայն տեսականի, որոնք ապահովում են անզուգական բազմազանություն և հուսալիություն ձեր բոլոր ուղղահայաց տրանսպորտային կարիքների համար
             </p>
           </div>
           <div class="offer__swiper">
@@ -82,14 +152,16 @@
               slides-per-view="auto"
               pagination="false"
             >
-              <swiper-slide
-                ><div class="offer__block"></div>
-                <h4 class="offer__name">Upgrade of elevators</h4>
+              <swiper-slide>
+                <div class="offer__block"></div>
+                <h4 data-lang="en" class="offer__name hidden-as-language">Upgrade of elevators</h4>
+                <h4 data-lang="ru" class="offer__name hidden-as-language">Модернизация лифтов</h4>
+                <h4 data-lang="hy" class="offer__name hidden-as-language">Վերելակների արդիականացում</h4>
                 <p class="offer__text" id="offer__text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of.
-                </p></swiper-slide
-              >
+                </p>
+              </swiper-slide>
               <swiper-slide
                 ><div class="offer__block"></div>
                 <h4 class="offer__name">Upgrade of elevators</h4>
@@ -140,9 +212,17 @@
                   </defs>
                 </svg>
               </div>
-              <h4 class="offer__name">Importing of elevators</h4>
-              <p class="offer__text" id="offer__text">
+              <h4 data-lang="en" class="offer__name hidden-as-language">Importing of elevators</h4>
+              <h4 data-lang="ru" class="offer__name hidden-as-language">Импорт лифтов</h4>
+              <h4 data-lang="hy" class="offer__name hidden-as-language">Վերելակների ներմուծում</h4>
+              <p data-lang="en" class="offer__text" id="offer__text">
                 Unlocking access to world-class elevators through our importing services
+              </p>
+              <p data-lang="ru" class="offer__text hidden-as-language" id="offer__text">
+                Открывая доступ к лифтам мирового класса с помощью наших услуг по импорту
+              </p>
+              <p data-lang="hy" class="offer__text hidden-as-language" id="offer__text">
+                Բացելով համաշխարհային կարգի վերելակների մուտքը մեր ներմուծման ծառայությունների միջոցով
               </p>
             </li>
             <li class="offer__item">
@@ -165,9 +245,17 @@
                   </defs>
                 </svg>
               </div>
-              <h4 class="offer__name">Installation of elevators</h4>
-              <p class="offer__text" id="offer__text">
+              <h4 data-lang="en" class="offer__name hidden-as-language">Installation of elevators</h4>
+              <h4 data-lang="ru" class="offer__name hidden-as-language">Установка лифтов</h4>
+              <h4 data-lang="hy" class="offer__name hidden-as-language">Վերելակների տեղադրում</h4>
+              <p data-lang="en" class="offer__text hidden-as-language" id="offer__text">
                 Elevate your building's accessibility with expert installation services for elevators. Experience smooth and efficient vertical mobility
+              </p>
+              <p data-lang="ru" class="offer__text hidden-as-language" id="offer__text">
+                Повысьте доступность вашего здания с помощью квалифицированных услуг по установке лифтов. Испытайте плавную и эффективную вертикальную мобильность
+              </p>
+              <p data-lang="hy" class="offer__text hidden-as-language" id="offer__text">
+                Բարձրացրեք ձեր շենքի հասանելիությունը վերելակների տեղադրման որակյալ ծառայությունների միջոցով: Փորձեք սահուն և արդյունավետ ուղղահայաց շարժունակություն
               </p>
             </li>
             <li class="offer__item">
@@ -181,9 +269,17 @@
                   <path d="M53.3382 36.0188L67.5997 21.8956C68.2276 21.2738 69.2407 21.2787 69.8625 21.9066C70.4843 22.5345 70.4793 23.5476 69.8514 24.1694L55.5899 38.2926C54.962 38.9144 53.9489 38.9094 53.3271 38.2815C52.7053 37.6537 52.7103 36.6406 53.3382 36.0188Z" fill="#19191E"/>
                 </svg>
               </div>
-              <h4 class="offer__name">Making Elevators</h4>
-              <p class="offer__text" id="offer__text">
+              <h4 data-lang="en" class="offer__name hidden-as-language">Making Elevators</h4>
+              <h4 data-lang="ru" class="offer__name hidden-as-language">Изготовление лифтов</h4>
+              <h4 data-lang="hy" class="offer__name hidden-as-language">Վերելակների պատրաստում</h4>
+              <p data-lang="en" class="offer__text hidden-as-language" id="offer__text">
                 Experience the art of making elevators that combine innovation, functionality, and safety
+              </p>
+              <p data-lang="ru" class="offer__text hidden-as-language" id="offer__text">
+                Познакомьтесь с искусством изготовления лифтов, сочетающих в себе инновации, функциональность и безопасность
+              </p>
+              <p data-lang="hy" class="offer__text hidden-as-language" id="offer__text">
+                Անոթացեք վերելակների պատրաստման արվեստին, որոնք համատեղում են նորարարությունը, ֆունկցիոնալությունը և անվտանգությունը
               </p>
             </li>
             <li class="offer__item">
@@ -194,9 +290,17 @@
                   <path d="M63.7454 64.4326C63.7454 66.2084 62.306 67.6487 60.5293 67.6487C58.7535 67.6487 57.3132 66.2093 57.3132 64.4326C57.3132 62.6569 58.7526 61.2166 60.5293 61.2166C62.306 61.2175 63.7454 62.6569 63.7454 64.4326Z" stroke="#19191E" stroke-width="3" stroke-miterlimit="133.333"/>
                 </svg>
               </div>
-              <h4 class="offer__name">Maintenance Elevators</h4>
-              <p class="offer__text" id="offer__text">
+              <h4 data-lang="en" class="offer__name hidden-as-language">Maintenance of elevators</h4>
+              <h4 data-lang="ru" class="offer__name hidden-as-language">Oбслуживание лифтов</h4>
+              <h4 data-lang="hy" class="offer__name hidden-as-language">Վերելակների սպասարկում</h4>
+              <p data-lang="en" class="offer__text hidden-as-language" id="offer__text">
                 Elevator maintenance services to ensure smooth operations and longevity of your vertical transportation systems
+              </p>
+              <p data-lang="ru" class="offer__text hidden-as-language" id="offer__text">
+                Услуги по техническому обслуживанию лифтов для обеспечения бесперебойной работы и долговечности ваших вертикальных транспортных систем
+              </p>
+              <p data-lang="hy" class="offer__text hidden-as-language" id="offer__text">
+                Վերելակների տեխնիկական սպասարկման ծառայություններ ՝ ձեր ուղղահայաց տրանսպորտային համակարգերի անխափան աշխատանքն ու ամրությունն ապահովելու համար
               </p>
             </li>
           </ul>
@@ -205,11 +309,23 @@
       <section class="partners">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title" id="main.partners.title">
+            <h2 data-lang="en" class="section__title hidden-as-language" id="main.partners.title">
               Our Partners
             </h2>
-            <p class="section__descr" id="main.partners.description">
+            <h2 data-lang="ru" class="section__title hidden-as-language" id="main.partners.title">
+              Наши партнеры
+            </h2>
+            <h2 data-lang="hy" class="section__title hidden-as-language" id="main.partners.title">
+              Մեր գործընկերները
+            </h2>
+            <p data-lang="en" class="section__descr hidden-as-language" id="main.partners.description">
               Our partnerships drive success. Learn about the collaborations that empower us to deliver exceptional solutions
+            </p>
+            <p data-lang="ru" class="section__descr hidden-as-language" id="main.partners.description">
+              Наши партнерские отношения способствуют успеху. Узнайте о сотрудничестве, которое позволяет нам предлагать исключительные решения
+            </p>
+            <p data-lang="hy" class="section__descr hidden-as-language" id="main.partners.description">
+              Մեր գործընկերային հարաբերությունները նպաստում են հաջողության: Իմացեք համագործակցության մասին, որը թույլ է տալիս մեզ առաջարկել բացառիկ լուծումներ
             </p>
           </div>
           <swiper-container
@@ -293,11 +409,23 @@
       <section class="products section" id="products1">
         <div class="container">
           <div class="section__text">
-            <h2 class="section__title" id="main.products.title">
+            <h2 data-lang="en" class="section__title hidden-as-language" id="main.products.title">
               The latest Products
             </h2>
-            <p class="section__descr" id="main.products.description">
+            <h2 data-lang="ru" class="section__title hidden-as-language" id="main.products.title">
+              Новейшие продукты
+            </h2>
+            <h2 data-lang="hy" class="section__title hidden-as-language" id="main.products.title">
+              Նորագույն ապրանքներ
+            </h2>
+            <p data-lang="en" class="section__descr hidden-as-language" id="main.products.description">
               Explore our collection of latest products for the ultimate modernization and performance solutions. Stay ahead of the curve
+            </p>
+            <p data-lang="ru" class="section__descr hidden-as-language" id="main.products.description">
+              Ознакомьтесь с нашей коллекцией новейших продуктов в поисках оптимальных решений для модернизации и повышения производительности. Будьте на шаг впереди всех
+            </p>
+            <p data-lang="hy" class="section__descr hidden-as-language" id="main.products.description">
+              Ստուգեք մեր նորագույն ապրանքների հավաքածուն ՝ արդիականացման և արտադրողականության օպտիմալ լուծումների համար: Եղեք մեկ քայլ առաջ բոլորից
             </p>
           </div>
           <swiper-container
@@ -514,487 +642,44 @@
               </div>
             </li>
           </ul>
-          <a href="./catalog.html" class="btn" id="main.products.button"
-            >View All</a
-          >
+          <a data-lang="en" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">View All</a>
+          <a data-lang="ru" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">Показать все</a>
+          <a data-lang="hy" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">Տեսնել բոլորը</a>
         </div>
       </section>
-<!--      <section class="products section" id="products2">-->
-<!--        <div class="container">-->
-<!--          <div class="section__text">-->
-<!--            <h2 class="section__title" id="main.products.title">-->
-<!--              The latest Products-->
-<!--            </h2>-->
-<!--            <p class="section__descr" id="main.products.description">-->
-<!--              It is a long established fact that a reader will be distracted by-->
-<!--              the readable content of a page when looking at its layout.-->
-<!--            </p>-->
-<!--          </div>-->
-<!--          <swiper-container-->
-<!--            class="product__swiper"-->
-<!--            id="product-swiper"-->
-<!--            space-between="30"-->
-<!--            slides-per-view="auto"-->
-<!--            pagination="false"-->
-<!--          >-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--          </swiper-container>-->
-<!--          <ul class="product__list" id="products-list">-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--          <a href="./catalog.html" class="btn" id="main.products.button"-->
-<!--            >View All</a-->
-<!--          >-->
-<!--        </div>-->
-<!--      </section>-->
-<!--      <section class="products section" id="products3">-->
-<!--        <div class="container">-->
-<!--          <div class="section__text">-->
-<!--            <h2 class="section__title" id="main.products.title">-->
-<!--              The latest Products-->
-<!--            </h2>-->
-<!--            <p class="section__descr" id="main.products.description">-->
-<!--              It is a long established fact that a reader will be distracted by-->
-<!--              the readable content of a page when looking at its layout.-->
-<!--            </p>-->
-<!--          </div>-->
-<!--          <swiper-container-->
-<!--            class="product__swiper"-->
-<!--            id="product-swiper"-->
-<!--            space-between="30"-->
-<!--            slides-per-view="auto"-->
-<!--            pagination="false"-->
-<!--          >-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--            <swiper-slide>-->
-<!--              <img src="#" class="product__image1" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </swiper-slide>-->
-<!--          </swiper-container>-->
-<!--          <ul class="product__list" id="products-list">-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--            <li class="product__item">-->
-<!--              <img src="#" class="product__image" alt="product" />-->
-<!--              <div class="product__box">-->
-<!--                <div class="product__flex">-->
-<!--                  <h5 class="product__name">FJ-HD2</h5>-->
-<!--                  <ul class="rating">-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                    <li class="star"></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--                <div class="product__descr">-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Ceilling:</h5>-->
-<!--                    <p class="product__ceilling">-->
-<!--                      Frosted stainless steel, mirror stain...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Car wall:</h5>-->
-<!--                    <p class="product__wall">-->
-<!--                      Frosted stainless steel, mirror...-->
-<!--                    </p>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <h5 class="product__key">Floor:</h5>-->
-<!--                    <p class="product__floor">Frosted stainless steel...</p>-->
-<!--                  </div>-->
-<!--                  <a href="" class="product__more"> Read More </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--          <a href="./catalog.html" class="btn" id="main.products.list"-->
-<!--            >View All</a-->
-<!--          >-->
-<!--        </div>-->
-<!--      </section>-->
       <section class="aboutus" id="about">
         <div class="aboutus__filter"></div>
         <div class="container">
           <div class="aboutus__box">
-            <h2 class="section__title aboutus__title" id="main.about.title">
+            <h2 data-lang="en" class="section__title aboutus__title hidden-as-language" id="main.about.title">
               About Us
             </h2>
-            <p
-              class="section__descr aboutus__descr"
-              id="main.about.description"
-            >
+            <h2 data-lang="ru" class="section__title aboutus__title hidden-as-language" id="main.about.title">
+              О нас
+            </h2>
+            <h2 data-lang="hy" class="section__title aboutus__title hidden-as-language" id="main.about.title">
+              Մեր մասին
+            </h2>
+            <p data-lang="en" class="section__descr aboutus__descr hidden-as-language" id="main.about.description">
               With a team of knowledgeable experts in the elevator industry,
               we are dedicated to providing exceptional support and guidance at
               every step. Whether you need assistance with product selection,
               technical specifications, or general inquiries, our responsive
-              customer service is here to help.
+              customer service is here to help
+            </p>
+            <p data-lang="ru" class="section__descr aboutus__descr hidden-as-language" id="main.about.description">
+              Располагая командой знающих экспертов в лифтовой отрасли,
+              мы стремимся обеспечить исключительную поддержку и руководство на
+              на каждом шагу. Независимо от того, нужна ли вам помощь с выбором продукта,
+              техническими характеристиками или общими запросами, наш отзывчивый
+              служба поддержки клиентов здесь, чтобы помочь
+            </p>
+            <p data-lang="hy" class="section__descr aboutus__descr hidden-as-language" id="main.about.description">
+              Ունենալով վերելակների արդյունաբերության բանիմաց փորձագետների թիմ,
+              մենք ձգտում ենք ապահովել բացառիկ աջակցություն և առաջնորդություն
+              ամեն քայլափոխի: Անկախ նրանից, թե օգնության կարիք ունեք ապրանքի ընտրության հարցում,
+              տեխնիկական բնութագրերի կամ ընդհանուր հարցումների, մեր պատասխանատու
+              հաճախորդների աջակցությունն այստեղ է ՝ օգնելու համար
             </p>
           </div>
         </div>
@@ -1002,9 +687,17 @@
       <section class="works section" id="gallery">
         <div class="container">
           <div class="section__text works__text">
-            <h2 class="section__title" id="main.works.title">Our Works</h2>
-            <p class="section__descr works__descr" id="main.works.description">
+            <h2 data-lang="en" class="section__title hidden-as-language" id="main.works.title">Our Works</h2>
+            <h2 data-lang="ru" class="section__title hidden-as-language" id="main.works.title">Нашы работы</h2>
+            <h2 data-lang="hy" class="section__title hidden-as-language" id="main.works.title">Մեր աշխատանքները</h2>
+            <p data-lang="en" class="section__descr hidden-as-language works__descr" id="main.works.description">
               Discover our portfolio of successful projects showcasing innovation, quality, and customer satisfaction. Elevating vertical mobility together
+            </p>
+            <p data-lang="ru" class="section__descr hidden-as-language works__descr" id="main.works.description">
+              Ознакомьтесь с нашим портфолио успешных проектов, демонстрирующих инновации, качество и удовлетворенность клиентов. Совместное повышение вертикальной мобильности
+            </p>
+            <p data-lang="hy" class="section__descr hidden-as-language works__descr" id="main.works.description">
+              Ստուգեք մեր հաջողված նախագծերի պորտֆելը, որոնք ցույց են տալիս նորարարությունը, որակը և Հաճախորդների բավարարվածությունը: Ուղղահայաց շարժունակության համատեղ բարելավում
             </p>
           </div>
           <div class="works__album">
@@ -1036,7 +729,9 @@
     </main>
     <footer class="footer">
       <div class="footer__top">
-        <span class="footer__text">follow us</span>
+        <span data-lang="en" class="footer__text hidden-as-language">Follow us</span>
+        <span data-lang="ru" class="footer__text hidden-as-language">Отслеживайте нас</span>
+        <span data-lang="hy" class="footer__text hidden-as-language">Հետևեք մեզ</span>
         <div class="social">
           <a
             href="https://www.facebook.com/hrazdanverelak.llc"
@@ -1127,12 +822,16 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span class="bottom_text">Copyright <span id="copyright-year"></span></span>
+        <span data-lang="en" class="bottom_text hidden-as-language">&copy; <span id="copyright-year"></span> «Hrazdan Verelak» LLC</span>
+        <span data-lang="ru" class="bottom_text hidden-as-language">&copy; <span id="copyright-year"></span> «Раздан Верелак» ООО</span>
+        <span data-lang="hy" class="bottom_text hidden-as-language">&copy; <span id="copyright-year"></span> «Հրազդան Վերելակt» ՍՊԸ</span>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="./scripts/imagesScript.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/language-detecting.js"></script>
     <script src="./scripts/home.js"></script>
   </body>
 </html>

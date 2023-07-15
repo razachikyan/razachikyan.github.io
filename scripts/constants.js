@@ -8,12 +8,12 @@ const ReduxActions = Object.freeze({
     OPEN_PRODUCT_MODAL: "OPEN_PRODUCT_MODAL",
     CLOSE_PRODUCT_MODAL: "CLOSE_PRODUCT_MODAL",
 });
-const ElevatorTypes = Object.freeze({
-    PASSENGER: 0,
-    OBSERVATION: 1,
-    FREIGHT: 2,
-    CAR: 3,
-    VILLA: 4,
-    ESCALATOR: 5,
-    MOVING_WALK: 6
+const AppLanguages = Object.freeze({
+    EN: "en",
+    HY: "hy",
+    RU: "ru",
+});
+const FlickrAlbumsIds = Object.freeze({
+    CATALOG: "72177720309783162",
+    OUR_WORKS: "72177720309783442",
 });

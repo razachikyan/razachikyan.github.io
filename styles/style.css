@@ -191,6 +191,11 @@ p {
 .tablet-item:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.hidden-as-language {
+  display: none !important;
+}
+
 /*header*/
 
 .burger__list {
@@ -207,10 +212,14 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-grow: 1;
+}
+
+.mail .header__contact.mail {
+  text-decoration: none;
 }
 
 .header__contact {
-  text-decoration-line: underline;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -218,6 +227,13 @@ p {
   font-size: 16px;
   line-height: 150%;
   color: var(--white);
+}
+
+.header__languages {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header__top {
@@ -1275,7 +1291,8 @@ p {
   }
 
   .header__contact,
-  .mail {
+  .mail,
+  .header__languages {
     display: none;
   }
 

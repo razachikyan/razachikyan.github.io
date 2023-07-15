@@ -48,6 +48,7 @@ store.subscribe(() => {
       }));
     }
   });
+  checkLanguages();
 
   // Product modal
   const $modal = document.querySelector("#product-modal");
@@ -91,12 +92,26 @@ store.subscribe(() => {
     $productInfo.innerHTML = null;
     document.body.style.overflowY = "unset";
   }
+
+  // Open product modal from url param (if navigated from another page)
+  const { searchParams: params, search } = new URL(document.location);
+  const searchParams = new URLSearchParams(search);
+  const selectedProductId = params.get("product-id");
+  if (selectedProductId !== null && state.products.some(p => selectedProductId === p.id)) {
+    searchParams.delete("product-id");
+    window.history.replaceState({}, '', `${window.location.pathname}?${searchParams}`);
+    store.dispatch({ type: ReduxActions.OPEN_PRODUCT_MODAL, payload: { productId: selectedProductId }});
+  }
 });
 
 window.addEventListener("load", async () => {
   // Fetch images
-  const data = await FlickrUtils.getUserImages({ user_id: FLICKR_USER_ID, api_key: FLICKR_API_KEY });
-  store.dispatch({ type: ReduxActions.FETCHED_PRODUCTS, payload: data.photos.photo });
+  const data = await FlickrUtils.getUserImages({
+    user_id: FLICKR_USER_ID,
+    api_key: FLICKR_API_KEY,
+    photoset_id: FlickrAlbumsIds.CATALOG,
+  });
+  store.dispatch({ type: ReduxActions.FETCHED_PRODUCTS, payload: data.photoset.photo });
 
   // Filters logic
   const $elevatorTypesForm = document.querySelector("#elevator-types-form");
@@ -108,6 +123,7 @@ window.addEventListener("load", async () => {
       if (c.checked) newElevatorTypes.push(+c.value);
     });
     store.dispatch({ type: ReduxActions.SET_ELEVATOR_TYPES, payload: newElevatorTypes });
+    checkLanguages();
   });
 
   // Products modal
