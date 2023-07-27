@@ -11,7 +11,7 @@
   <body>
     <header class="header catalog__header">
       <div class="header__top">
-        <div class="container flex flex-between">
+        <div class="container flex flex-between" id="controls">
           <div class="mobile__block mobile"></div>
           <div class="burger mobile" id="burger-mobile"></div>
           <div class="mail">
@@ -22,8 +22,8 @@
           </div>
           <div class="header__contact" id="header.top.phone">
             <img src="./assets/images/phone.svg" />
-            <a href="tel:+37493-803-592" class="header__number">093 803592</a>
-            <a href="tel:+37495-803-592" class="header__number">095 803592</a>
+            <a href="tel:+37493803592" class="header__number">093 803592</a>
+            <a href="tel:+37495803592" class="header__number">095 803592</a>
           </div>
           <div class="header__languages">
             <a href="?lang=en" title="English">
@@ -59,7 +59,7 @@
           <div class="container flex flex-between">
             <div class="header__block catalog__block"></div>
             <nav class="header__nav catalog__nav">
-              <div class="burger tablet" id="burger"></div>
+              <div class="burger tablet" id="burger-tablet"></div>
               <ul class="header__list" id="tablet-list">
                 <li data-lang="en" class="header__item hidden-as-language" id="header.bottom.nav.services">
                   <a href="./index.html?lang=en">Home</a>
@@ -77,7 +77,7 @@
                   <a href="./catalog.html?lang=ru">Каталог</a>
                 </li>
                 <li data-lang="hy" class="header__item active hidden-as-language" id="header.bottom.nav.services">
-                  <a href="./catalog.html?lang=hy">Կատալօգ</a>
+                  <a href="./catalog.html?lang=hy">Կատալոգ</a>
                 </li>
               </ul>
             </nav>
@@ -304,7 +304,11 @@
         <span data-lang="hy" class="bottom_text hidden-as-language">&copy; <span id="copyright-year"></span> «Հրազդան Վերելակt» ՍՊԸ</span>
       </div>
     </footer>
-
+    <a class="mobile-call-btn">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="m7.772 2.439 1.076-.344c1.01-.322 2.087.199 2.52 1.217l.859 2.028c.374.883.167 1.922-.514 2.568L9.819 9.706c.116 1.076.478 2.135 1.084 3.177a8.678 8.678 0 0 0 2.271 2.595l2.275-.76c.863-.287 1.802.044 2.33.821l1.233 1.81c.615.904.505 2.15-.258 2.916l-.818.821c-.814.817-1.977 1.114-3.052.778-2.539-.792-4.873-3.143-7.003-7.053-2.133-3.916-2.886-7.24-2.258-9.968.264-1.148 1.081-2.063 2.149-2.404Z" fill="currentColor"/>
+      </svg>
+    </a>
     <div id="product-modal">
       <div class="content">
         <button class="close-btn">
@@ -313,7 +317,61 @@
             <path d="M1 21.5L21.5 1" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
+        <div class="logo"></div>
         <div class="product-info"></div>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <div class="header">
+        <div class="logo"></div>
+        <button class="close-btn" id="mobile-menu-close-btn">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L21.5 21.5" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 21.5L21.5 1" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="navigation">
+        <a data-lang="en" href="./index.html?lang=en" class="hidden-as-language link">Home</a>
+        <a data-lang="ru" href="./index.html?lang=ru" class="hidden-as-language link">Главная</a>
+        <a data-lang="hy" href="./index.html?lang=hy" class="hidden-as-language link">Գլխավոր</a>
+        <a data-lang="en" href="./catalog.html?lang=en" class="hidden-as-language link active">Catalog</a>
+        <a data-lang="ru" href="./catalog.html?lang=ru" class="hidden-as-language link active">Каталог</a>
+        <a data-lang="hy" href="./catalog.html?lang=hy" class="hidden-as-language link active">Կատալոգ</a>
+      </nav>
+      <div class="languages">
+        <a href="?lang=em" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 640 420" width="40" height="30">
+            <path fill="#bd3d44" d="M0 0h640v480H0"/>
+            <path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/>
+            <path fill="#192f5d" d="M0 0h364.8v258.5H0"/>
+            <marker id="a" markerHeight="30" markerWidth="30">
+              <path fill="#fff" d="m14 0 9 27L0 10h28L5 27z"/>
+            </marker>
+            <path fill="none" marker-mid="url(#a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60L0 0"/>
+          </svg>
+          <span>English</span>
+        </a>
+        <a href="?lang=hy" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-am" viewBox="0 0 640 420" width="40" height="30">
+            <path fill="#d90012" d="M0 0h640v160H0z"/>
+            <path fill="#0033a0" d="M0 160h640v160H0z"/>
+            <path fill="#f2a800" d="M0 320h640v160H0z"/>
+          </svg>
+          <span>Հայերեն</span>
+        </a>
+        <a href="?lang=ru" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ru" viewBox="0 0 640 420" width="40" height="30">
+            <g fill-rule="evenodd" stroke-width="1pt">
+              <path fill="#fff" d="M0 0h640v480H0z"/>
+              <path fill="#0039a6" d="M0 160h640v320H0z"/>
+              <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+            </g>
+          </svg>
+          <span>
+            Русский
+          </span>
+        </a>
       </div>
     </div>
 <!--    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>-->

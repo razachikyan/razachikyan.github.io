@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <div class="container flex flex-between">
+        <div class="container flex flex-between" id="controls">
           <div class="mobile__block mobile"></div>
           <div class="burger mobile" id="burger-mobile"></div>
           <div class="mail">
@@ -26,8 +26,8 @@
           </div>
           <div class="header__contact" id="header.top.phone">
             <img src="./assets/images/phone.svg" />
-            <a href="tel:+37493-803-592" class="header__number">093 803592</a>
-            <a href="tel:+37495-803-592" class="header__number">095 803592</a>
+            <a href="tel:+37493803592" class="header__number">093 803592</a>
+            <a href="tel:+37495803592" class="header__number">095 803592</a>
           </div>
           <div class="header__languages">
             <a href="?lang=en" title="English">
@@ -81,7 +81,7 @@
                   <a href="./catalog.html?lang=ru">Каталог</a>
                 </li>
                 <li data-lang="hy" class="header__item hidden-as-language" id="header.bottom.nav.services">
-                  <a href="./catalog.html?lang=hy">Կատալօգ</a>
+                  <a href="./catalog.html?lang=hy">Կատալոգ</a>
                 </li>
               </ul>
             </nav>
@@ -111,13 +111,13 @@
             <p class="general__descr hidden-as-language" id="main.general.description" data-lang="ru">
               Максимизируйте свои инвестиции: Достигайте оптимального соотношения цены и качества и душевного спокойствия с помощью наших решений. Определение приоритетов вашей безопасности и бюджетных потребностей
             </p>
-            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="en">
+            <a href="./catalog.html?lang=en" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="en">
               Go to the Products
             </a>
-            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="ru">
+            <a href="./catalog.html?lang=ru" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="ru">
               Перейдите к разделу "Продукты"
             </a>
-            <a href="./catalog.html" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="hy">
+            <a href="./catalog.html?lang=hy" class="btn general__btn hidden-as-language" id="main.general.button" data-lang="hy">
               Անցեք "Ապրանքներ"բաժին
             </a>
           </div>
@@ -428,223 +428,7 @@
               Ստուգեք մեր նորագույն ապրանքների հավաքածուն ՝ արդիականացման և արտադրողականության օպտիմալ լուծումների համար: Եղեք մեկ քայլ առաջ բոլորից
             </p>
           </div>
-          <swiper-container
-            class="product__swiper"
-            id="product-swiper"
-            space-between="30"
-            slides-per-view="auto"
-            pagination="false"
-          >
-            <swiper-slide>
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </swiper-slide>
-          </swiper-container>
-          <ul class="product__list" id="products-list">
-            <li class="product__item">
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </li>
-            <li class="product__item">
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </li>
-            <li class="product__item">
-              <img src="#" class="product__image1" alt="product" />
-              <div class="product__box">
-                <div class="product__flex">
-                  <h5 class="product__name">FJ-HD2</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
-                </div>
-                <div class="product__descr">
-                  <div class="col">
-                    <h5 class="product__key">Ceilling:</h5>
-                    <p class="product__ceilling">
-                      Frosted stainless steel, mirror stain...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Car wall:</h5>
-                    <p class="product__wall">
-                      Frosted stainless steel, mirror...
-                    </p>
-                  </div>
-                  <div class="col">
-                    <h5 class="product__key">Floor:</h5>
-                    <p class="product__floor">Frosted stainless steel...</p>
-                  </div>
-                  <a href="" class="product__more"> Read More </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <a data-lang="en" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">View All</a>
-          <a data-lang="ru" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">Показать все</a>
-          <a data-lang="hy" href="./catalog.html" class="btn hidden-as-language" id="main.products.button">Տեսնել բոլորը</a>
+          <ul class="product__list" id="products-list"></ul>
         </div>
       </section>
       <section class="aboutus" id="about">
@@ -700,33 +484,35 @@
               Ստուգեք մեր հաջողված նախագծերի պորտֆելը, որոնք ցույց են տալիս նորարարությունը, որակը և Հաճախորդների բավարարվածությունը: Ուղղահայաց շարժունակության համատեղ բարելավում
             </p>
           </div>
-          <div class="works__album">
-            <img
-              src=""
-              alt="work image"
-              class="work__main"
-              id="main-work-image"
-            />
-            <div class="work__images">
-              <img src="" alt="work image" class="work__img" />
-              <img src="" alt="work image" class="work__img" />
-              <img src="" alt="work image" class="work__img" />
-              <div class="work__img">
-                <a href="./catalog.html" class="images__link">
-                  +12 <span class="link__text">see all</span>
-                </a>
-                <img
-                  src=""
-                  alt="work image"
-                  class="last"
-                  id="work-image-link"
-                />
-              </div>
-            </div>
-          </div>
+          <div class="gallery" id="our-works"></div>
         </div>
       </section>
     </main>
+    <div id="gallery-modal">
+      <div class="header">
+        <button class="close-btn" id="gallery-modal-close-btn">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L21.5 21.5" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 21.5L21.5 1" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="images">
+        <button class="slider-arrow prev-slide" id="gallery-modal-prev-slide-arrow">
+          <svg width="48" height="48" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.001c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10Zm.28 14.53a.75.75 0 0 1-.976.073l-.085-.072-4-4.001a.75.75 0 0 1-.073-.977l.073-.084 4.001-4a.75.75 0 0 1 1.133.977l-.072.084-2.722 2.72h6.691a.75.75 0 0 1 .744.649L17 12a.75.75 0 0 1-.648.744l-.102.006H9.56l2.72 2.72a.75.75 0 0 1 .073.977l-.073.084Z" fill="#fff"/>
+          </svg>
+        </button>
+        <div class="current-image">
+          <img id="gallery-modal-current-image" alt="gallery-image" />
+        </div>
+        <button class="slider-arrow next-slide"  id="gallery-modal-next-slide-arrow">
+          <svg width="48" height="48" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.001c5.524 0 10 4.477 10 10s-4.476 10-10 10c-5.522 0-10-4.477-10-10s4.478-10 10-10Zm.781 5.469-.084-.073a.75.75 0 0 0-.883-.007l-.094.08-.072.084a.75.75 0 0 0-.007.883l.08.094 2.719 2.72H7.75l-.102.006a.75.75 0 0 0-.641.642L7 12l.007.102a.75.75 0 0 0 .641.641l.102.007h6.69l-2.72 2.72-.073.085a.75.75 0 0 0 1.05 1.05l.083-.073 4.002-4 .072-.085a.75.75 0 0 0 .008-.882l-.08-.094-4-4.001-.085-.073.084.073Z" fill="#fff"/>
+          </svg>
+        </button>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__top">
         <span data-lang="en" class="footer__text hidden-as-language">Follow us</span>
@@ -827,7 +613,67 @@
         <span data-lang="hy" class="bottom_text hidden-as-language">&copy; <span id="copyright-year"></span> «Հրազդան Վերելակt» ՍՊԸ</span>
       </div>
     </footer>
+    <a class="mobile-call-btn">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="m7.772 2.439 1.076-.344c1.01-.322 2.087.199 2.52 1.217l.859 2.028c.374.883.167 1.922-.514 2.568L9.819 9.706c.116 1.076.478 2.135 1.084 3.177a8.678 8.678 0 0 0 2.271 2.595l2.275-.76c.863-.287 1.802.044 2.33.821l1.233 1.81c.615.904.505 2.15-.258 2.916l-.818.821c-.814.817-1.977 1.114-3.052.778-2.539-.792-4.873-3.143-7.003-7.053-2.133-3.916-2.886-7.24-2.258-9.968.264-1.148 1.081-2.063 2.149-2.404Z" fill="currentColor"/>
+      </svg>
+    </a>
+    <div id="mobile-menu">
+      <div class="header">
+        <div class="logo"></div>
+        <button class="close-btn" id="mobile-menu-close-btn">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L21.5 21.5" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 21.5L21.5 1" stroke="#ACACB5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="navigation">
+        <a data-lang="en" href="./index.html?lang=en" class="hidden-as-language link active">Home</a>
+        <a data-lang="ru" href="./index.html?lang=ru" class="hidden-as-language link active">Главная</a>
+        <a data-lang="hy" href="./index.html?lang=hy" class="hidden-as-language link active">Գլխավոր</a>
+        <a data-lang="en" href="./catalog.html?lang=en" class="hidden-as-language link">Catalog</a>
+        <a data-lang="ru" href="./catalog.html?lang=ru" class="hidden-as-language link">Каталог</a>
+        <a data-lang="hy" href="./catalog.html?lang=hy" class="hidden-as-language link">Կատալոգ</a>
+      </nav>
+      <div class="languages">
+        <a href="?lang=em" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-us" viewBox="0 0 640 420" width="40" height="30">
+            <path fill="#bd3d44" d="M0 0h640v480H0"/>
+            <path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/>
+            <path fill="#192f5d" d="M0 0h364.8v258.5H0"/>
+            <marker id="a" markerHeight="30" markerWidth="30">
+              <path fill="#fff" d="m14 0 9 27L0 10h28L5 27z"/>
+            </marker>
+            <path fill="none" marker-mid="url(#a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60L0 0"/>
+          </svg>
+          <span>English</span>
+        </a>
+        <a href="?lang=hy" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-am" viewBox="0 0 640 420" width="40" height="30">
+            <path fill="#d90012" d="M0 0h640v160H0z"/>
+            <path fill="#0033a0" d="M0 160h640v160H0z"/>
+            <path fill="#f2a800" d="M0 320h640v160H0z"/>
+          </svg>
+          <span>Հայերեն</span>
+        </a>
+        <a href="?lang=ru" class="language">
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ru" viewBox="0 0 640 420" width="40" height="30">
+            <g fill-rule="evenodd" stroke-width="1pt">
+              <path fill="#fff" d="M0 0h640v480H0z"/>
+              <path fill="#0039a6" d="M0 160h640v320H0z"/>
+              <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+            </g>
+          </svg>
+          <span>
+            Русский
+          </span>
+        </a>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="./scripts/redux.js"></script>
+    <script src="./scripts/utils.js"></script>
     <script src="./scripts/imagesScript.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/constants.js"></script>

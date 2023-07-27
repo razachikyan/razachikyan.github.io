@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0327248-8ce7-4e8b-b656-8ddc7fefd8ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/language-detecting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -26,6 +25,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
   <component name="ProjectId" id="2ReVdc1ZuYBMvO9CW6YOFxjxPeg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,6 +36,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
@@ -67,7 +71,13 @@
       <workItem from="1689067154971" duration="7455000" />
       <workItem from="1689095430505" duration="6840000" />
       <workItem from="1689324339645" duration="11359000" />
-      <workItem from="1689426589105" duration="7748000" />
+      <workItem from="1689426589105" duration="16090000" />
+      <workItem from="1689958537344" duration="9465000" />
+      <workItem from="1690114837221" duration="5138000" />
+      <workItem from="1690302830471" duration="3969000" />
+      <workItem from="1690307045354" duration="3984000" />
+      <workItem from="1690357724457" duration="31000" />
+      <workItem from="1690479347121" duration="3138000" />
     </task>
     <servers />
   </component>

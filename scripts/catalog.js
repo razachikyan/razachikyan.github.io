@@ -7,6 +7,7 @@ const initialState = {
     isOpen: false, // false
     productId: null,
   },
+  isMobileMenuOpen: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,6 +20,10 @@ const reducer = (state = initialState, action) => {
         return {...state, productModal: { isOpen: true, productId: action.payload.productId }};
     case ReduxActions.CLOSE_PRODUCT_MODAL:
       return {...state, productModal: { isOpen: false, productId: null }};
+    case ReduxActions.OPEN_MOBILE_MENU:
+      return { ...state, isMobileMenuOpen: true };
+    case ReduxActions.CLOSE_MOBILE_MENU:
+      return { ...state, isMobileMenuOpen: false };
     default:
       return state;
   }
@@ -28,7 +33,13 @@ const store = Redux.createStore(reducer);
 
 store.subscribe(() => {
   const state = store.getState();
-  console.log("STATE", state);
+
+  // Mobile menu
+  const $mobileMenu = document.querySelector("#mobile-menu");
+  if ($mobileMenu) {
+    $mobileMenu.classList.toggle("opened", state.isMobileMenuOpen);
+  }
+
   // Render products
   const $catalogList = document.querySelector(".catalog__list");
   $catalogList.innerHTML = null; // Remove elements for filters
@@ -105,7 +116,7 @@ store.subscribe(() => {
 });
 
 window.addEventListener("load", async () => {
-  // Fetch images
+  // Fetch products
   const data = await FlickrUtils.getUserImages({
     user_id: FLICKR_USER_ID,
     api_key: FLICKR_API_KEY,
@@ -142,5 +153,23 @@ window.addEventListener("load", async () => {
   if ($copyrightYear) {
     const d = new Date();
     $copyrightYear.innerHTML = d.getFullYear().toString();
+  }
+
+  // Mobile menu
+  const $mobileMenuOpenBtn = document.querySelector("#burger-tablet");
+  const $mobileMenuCloseBtn = document.querySelector("#mobile-menu-close-btn");
+
+  if ($mobileMenuOpenBtn) {
+    $mobileMenuOpenBtn.addEventListener("click", () => {
+      store.dispatch({ type: ReduxActions.OPEN_MOBILE_MENU });
+      document.body.style.overflowY = "hidden";
+    });
+  }
+
+  if ($mobileMenuCloseBtn) {
+    $mobileMenuCloseBtn.addEventListener("click", () => {
+      store.dispatch({ type: ReduxActions.CLOSE_MOBILE_MENU });
+      document.body.style.overflowY = "auto";
+    });
   }
 });
