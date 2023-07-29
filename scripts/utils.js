@@ -7,7 +7,7 @@ class FlickrUtils {
                 photoset_id,
                 format: "json",
                 method: "flickr.photosets.getPhotos", // flickr.people.getPhotos
-                nojsoncallback: 1,
+                nojsoncallback: "1",
                 extras: "description",
             });
             const response = await fetch(`https://api.flickr.com/services/rest?${params}`);
@@ -79,13 +79,6 @@ class RenderFunctions {
               <div class="product__box">
                 <div class="product__flex">
                   <h5 class="product__name">${info.name}</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
                 </div>
                 <div class="product__descr">
                     ${info.properties.map(p => (
