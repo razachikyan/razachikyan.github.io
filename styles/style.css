@@ -311,7 +311,7 @@ p {
 .general {
   /*z-index: -10;*/
   position: relative;
-  background-image: url(../assets/images/general.jpg);
+  background-image: url(../assets/images/general-bg.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -662,6 +662,7 @@ p {
 
 #gallery-modal .images .current-image img {
   max-height: calc(100vh - 156px);
+  min-width: 80%;
 }
 
 #gallery-modal .images .slider-arrow:disabled {
@@ -787,6 +788,18 @@ p {
 #elevator-types-form .title {
   font-weight: 600;
   font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+#elevator-types-form .title .arrow {
+  color: var(--body-text-color);
+  pointer-events: none;
+}
+
+#elevator-types-form .title .arrow.up {
+  transform: rotate(180deg);
 }
 
 .catalog__block {
@@ -820,6 +833,10 @@ p {
   align-items: center;
   column-gap: 12px;
   cursor: pointer;
+}
+
+.catalog-filter-property.hidden {
+  display: none;
 }
 
 .custom__radio {

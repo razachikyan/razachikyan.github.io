@@ -172,4 +172,26 @@ window.addEventListener("load", async () => {
       document.body.style.overflowY = "auto";
     });
   }
+
+  // Catalog filters accordion
+  const $catalogFilters = document.querySelectorAll(".catalog-filter-form");
+
+  $catalogFilters.forEach($cf => {
+    const $titles = $cf.querySelectorAll(".title");
+
+    $titles.forEach($t => {
+      $t.addEventListener("click", ({ target: $t }) => {
+        console.log("TITLE CLICK:", $t, $cf.classList.contains("closed"));
+        const $labels = $cf.querySelectorAll(".catalog-filter-property");
+        const $arrow = $t.querySelector(".arrow");
+
+        $cf.classList.toggle("closed")
+        $arrow.classList.toggle("up", !$cf.classList.contains("closed"));
+
+        $labels.forEach($l => {
+          $l.classList.toggle("hidden", $cf.classList.contains("closed"));
+        })
+      });
+    });
+  })
 });

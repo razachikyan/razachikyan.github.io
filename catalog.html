@@ -111,11 +111,26 @@
 <!--                Buttons-->
 <!--              </label>-->
 <!--            </form>-->
-            <form class="filter__block filters__checkbox" id="elevator-types-form">
-              <h3 data-lang="en" class="title hidden-as-language">Types</h3>
-              <h3 data-lang="ru" class="title hidden-as-language">Типы</h3>
-              <h3 data-lang="hy" class="title hidden-as-language">Տեսակներ</h3>
-              <label class="label" for="passenger-elevator">
+            <form class="filter__block filters__checkbox catalog-filter-form closed" id="elevator-types-form">
+              <h3 data-lang="en" class="title hidden-as-language">
+                Types
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                  <path d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" fill="currentColor"/>
+                </svg>
+              </h3>
+              <h3 data-lang="ru" class="title hidden-as-language">
+                Типы
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                  <path d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" fill="currentColor"/>
+                </svg>
+              </h3>
+              <h3 data-lang="hy" class="title hidden-as-language">
+                Տեսակներ
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                  <path d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" fill="currentColor"/>
+                </svg>
+              </h3>
+              <label class="label catalog-filter-property hidden" for="passenger-elevator">
                 <span class="custom__checkbox"></span> <!-- custom__checkbox-checked -->
                 <input type="checkbox" value="0" id="passenger-elevator" name="passenger-elevator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Passenger Elevator</span>
@@ -123,7 +138,7 @@
                 <span data-lang="ru" class="checkbox-label hidden-as-language">Пассажирский лифт</span>
               </label>
 
-              <label class="label" for="observation-elevator">
+              <label class="label catalog-filter-property hidden" for="observation-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="1" id="observation-elevator" name="observation-elevator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Observation Elevator</span>
@@ -131,7 +146,7 @@
                 <span data-lang="hy" class="checkbox-label hidden-as-language">Տեսարժան վերելակ</span>
               </label>
 
-              <label class="label" for="freight-elevator">
+              <label class="label catalog-filter-property hidden" for="freight-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="2" id="freight-elevator" name="freight-elevator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Freight Elevator</span>
@@ -139,7 +154,7 @@
                 <span data-lang="ru" class="checkbox-label hidden-as-language">Грузовой лифт</span>
               </label>
 
-              <label class="label" for="car-elevator">
+              <label class="label catalog-filter-property hidden" for="car-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="3" id="car-elevator" name="car-elevator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Car Elevator</span>
@@ -147,7 +162,7 @@
                 <span data-lang="hy" class="checkbox-label hidden-as-language">Ավտոմեքենայի վերելակ</span>
               </label>
 
-              <label class="label" for="villa-elevator">
+              <label class="label catalog-filter-property hidden" for="villa-elevator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="4" id="villa-elevator" name="villa-elevator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Villa Elevator</span>
@@ -155,7 +170,7 @@
                 <span data-lang="ru" class="checkbox-label hidden-as-language">Лифт виллы</span>
               </label>
 
-              <label class="label" for="escalator">
+              <label class="label catalog-filter-property hidden" for="escalator">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="5" id="escalator" name="escalator" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Escalator</span>
@@ -163,7 +178,7 @@
                 <span data-lang="ru" class="checkbox-label hidden-as-language">Эскалатор</span>
               </label>
 
-              <label class="label" for="moving-walk">
+              <label class="label catalog-filter-property hidden" for="moving-walk">
                 <span class="custom__checkbox"></span>
                 <input type="checkbox" value="6" id="moving-walk" name="moving-walk" class="hidden" />
                 <span data-lang="en" class="checkbox-label hidden-as-language">Moving Walk</span>
