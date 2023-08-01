@@ -44,8 +44,6 @@ const store = Redux.createStore(reducer);
 store.subscribe(() => {
     const state = store.getState();
 
-    console.log("STATE", state);
-
     // Gallery images
     const $galleryModalCurrentImages = document.querySelector("#gallery-modal-current-image");
     if (state.galleryImages[state.galleryActiveImageIndex]) {

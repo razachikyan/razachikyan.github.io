@@ -311,7 +311,7 @@ p {
 .general {
   /*z-index: -10;*/
   position: relative;
-  background-image: url(../assets/images/general-bg.png);
+  background-image: url(../assets/images/general-background.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -663,6 +663,7 @@ p {
 #gallery-modal .images .current-image img {
   max-height: calc(100vh - 156px);
   min-width: 80%;
+  object-fit: contain;
 }
 
 #gallery-modal .images .slider-arrow:disabled {

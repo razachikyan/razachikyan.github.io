@@ -181,7 +181,6 @@ window.addEventListener("load", async () => {
 
     $titles.forEach($t => {
       $t.addEventListener("click", ({ target: $t }) => {
-        console.log("TITLE CLICK:", $t, $cf.classList.contains("closed"));
         const $labels = $cf.querySelectorAll(".catalog-filter-property");
         const $arrow = $t.querySelector(".arrow");
 
