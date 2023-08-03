@@ -223,6 +223,14 @@ p {
 
 /*header*/
 
+.homepage-logo-link {
+  color: var(--white);
+}
+
+.catalog-logo-link {
+  color: var(--black);
+}
+
 .burger__list {
   display: none;
 }
@@ -1205,9 +1213,10 @@ p {
 }
 
 #mobile-menu .header .logo {
-  width: 196px;
   height: 100%;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
 }
 
 #mobile-menu .header .close-btn {
@@ -1357,6 +1366,11 @@ p {
 }
 
 @media (max-width: 780px) {
+  .catalog-logo-link {
+    color: var(--white);
+  }
+
+
   .mobile-call-btn {
     display: flex;
   }
@@ -1374,6 +1388,7 @@ p {
   .header__bottom {
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
+    padding: 0;
   }
 
   .header__bottom .header__list {
