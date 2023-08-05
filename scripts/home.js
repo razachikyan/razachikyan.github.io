@@ -46,6 +46,7 @@ store.subscribe(() => {
 
     // Gallery images
     const $galleryModalCurrentImages = document.querySelector("#gallery-modal-current-image");
+    $galleryModalCurrentImages.setAttribute("src", undefined);
     if (state.galleryImages[state.galleryActiveImageIndex]) {
         $galleryModalCurrentImages.setAttribute("src", FlickrUtils.getImageFullUrl({
             id: state.galleryImages[state.galleryActiveImageIndex].id,
@@ -54,6 +55,12 @@ store.subscribe(() => {
             farm: state.galleryImages[state.galleryActiveImageIndex].farm,
         }));
     }
+
+    console.log("SSSSS", state);
+});
+
+store.subscribe(() => {
+    const state = store.getState();
 
     // Render products
     const $latestProductsList = document.querySelector("#products-list");
