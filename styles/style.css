@@ -1213,7 +1213,6 @@ p {
 }
 
 #mobile-menu .header .logo {
-  height: 100%;
   display: flex;
   justify-content: center;
   padding-top: 8px;
@@ -1466,6 +1465,10 @@ p {
 }
 
 @media (max-width: 750px) {
+  #product-modal .content .product-info .image-container img {
+    max-height: 279px;
+  }
+
   #gallery-modal .images {
     padding-left: 12px;
     padding-right: 12px;
