@@ -55,8 +55,6 @@ store.subscribe(() => {
             farm: state.galleryImages[state.galleryActiveImageIndex].farm,
         }));
     }
-
-    console.log("SSSSS", state);
 });
 
 store.subscribe(() => {
@@ -68,8 +66,8 @@ store.subscribe(() => {
     if ($latestProductsList) {
         $latestProductsList.innerHTML = null; // Remove elements for filters
         state.products.forEach((p, i) => {
-            // Render 3 products only
-            if (i < 3) {
+            // Render 5 products only
+            if (i < 5) {
                 const info = JSON.parse(p.description._content.replaceAll(`&quot;`, "\""));
                 $latestProductsList.insertAdjacentHTML("beforeend", RenderFunctions.renderHomepageLatestProduct({
                     id: p.id,

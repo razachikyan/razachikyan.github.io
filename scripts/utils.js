@@ -46,13 +46,6 @@ class RenderFunctions {
               <div class="product__box">
                 <div class="product__flex">
                   <h5 class="product__name">${info.name}</h5>
-                  <ul class="rating">
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                    <li class="star"></li>
-                  </ul>
                 </div>
                 <div class="product__descr">
                     ${info.properties.map(p => (
