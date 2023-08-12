@@ -122,7 +122,9 @@ window.addEventListener("load", async () => {
     api_key: FLICKR_API_KEY,
     photoset_id: FlickrAlbumsIds.CATALOG,
   });
-  store.dispatch({ type: ReduxActions.FETCHED_PRODUCTS, payload: data.photoset.photo });
+  if ("photoset" in data && "photo" in data.photoset) {
+    store.dispatch({ type: ReduxActions.FETCHED_PRODUCTS, payload: data.photoset.photo });
+  }
 
   // Filters logic
   const $elevatorTypesForm = document.querySelector("#elevator-types-form");

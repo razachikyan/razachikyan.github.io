@@ -22,6 +22,6 @@ const AppLanguages = Object.freeze({
     RU: "ru",
 });
 const FlickrAlbumsIds = Object.freeze({
-    CATALOG: "72177720310196639",
-    OUR_WORKS: "72177720308254455",
+    CATALOG: "72177720310426105",
+    OUR_WORKS: "72177720310445228",
 });
