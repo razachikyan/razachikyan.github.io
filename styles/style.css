@@ -151,7 +151,7 @@ p {
   line-height: 150%;
   text-align: center;
   max-width: 668px;
-  margin-bottom: 62px;
+  margin-bottom: 24px;
 }
 
 .section {
@@ -416,7 +416,7 @@ p {
 
 .partners__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .partners__item {
@@ -1522,10 +1522,6 @@ p {
 
   swiper-slide {
     width: 60%;
-  }
-
-  .partners__list {
-    display: none;
   }
 
   .partners__swiper {
