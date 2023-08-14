@@ -312,6 +312,7 @@ p {
 
 .header__number {
   cursor: pointer;
+  line-height: 8px;
 }
 /*main*/
 
@@ -421,10 +422,9 @@ p {
 
 .partners__item {
   padding: 21px 35.4px;
-}
-
-.partner__logo {
-  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Products */
