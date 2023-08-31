@@ -94,7 +94,7 @@ store.subscribe(() => {
     if ($gallery) {
         $gallery.innerHTML = null;
         state.galleryImages.forEach((gi, i) => {
-            if (i < 6) {
+            if (i < 9) {
                 $gallery.insertAdjacentHTML("beforeend", RenderFunctions.renderGalleryCoverImage({
                     imageUrl: FlickrUtils.getImageFullUrl({
                         id: gi.id,
