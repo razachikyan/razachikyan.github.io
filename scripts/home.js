@@ -45,15 +45,22 @@ store.subscribe(() => {
     const state = store.getState();
 
     // Gallery images
-    const $galleryModalCurrentImages = document.querySelector("#gallery-modal-current-image");
-    $galleryModalCurrentImages.setAttribute("src", undefined);
+    const $galleryModal = document.querySelector("#gallery-modal");
+    const $galleryModalCurrentImage = $galleryModal.querySelector("#gallery-modal-current-image");
+    const $galleryModalInfoSection = $galleryModal.querySelector("#info");
+    $galleryModalCurrentImage.setAttribute("src", undefined);
+    $galleryModalInfoSection.innerHTML = null;
     if (state.galleryImages[state.galleryActiveImageIndex]) {
-        $galleryModalCurrentImages.setAttribute("src", FlickrUtils.getImageFullUrl({
+        $galleryModalCurrentImage.setAttribute("src", FlickrUtils.getImageFullUrl({
             id: state.galleryImages[state.galleryActiveImageIndex].id,
             server: state.galleryImages[state.galleryActiveImageIndex].server,
             secret: state.galleryImages[state.galleryActiveImageIndex].secret,
             farm: state.galleryImages[state.galleryActiveImageIndex].farm,
         }));
+        try {
+            const info = JSON.parse(state.galleryImages[state.galleryActiveImageIndex].description._content.replaceAll(`&quot;`, "\""));
+            $galleryModalInfoSection.innerHTML = RenderFunctions.renderGalleryModalInfoSectionContent(info);
+        } catch (e) {}
     }
 });
 
@@ -69,7 +76,6 @@ store.subscribe(() => {
             // Render 5 products only
             if (i < 5) {
                 const info = JSON.parse(p.description._content.replaceAll(`&quot;`, "\""));
-                console.log(info.properties);
                 $latestProductsList.insertAdjacentHTML("beforeend", RenderFunctions.renderHomepageLatestProduct({
                     id: p.id,
                     info,

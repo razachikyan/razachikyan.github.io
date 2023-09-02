@@ -37,6 +37,33 @@ class RenderFunctions {
         `;
     }
 
+    static renderGalleryModalInfoSectionContent({ name, location, description }) {
+        return `
+            <div class="name">
+              <h3 class="title" data-lang="en">Name:</h3>
+              <h3 class="title" data-lang="hy">Անվանում:</h3>
+              <h3 class="title" data-lang="ru">Название:</h3>
+              <p class="content">${name}</p>
+            </div>
+            <div class="location">
+              <h3 class="title" data-lang="en">Location:</h3>
+              <h3 class="title" data-lang="hy">Գտնվելու վայր:</h3>
+              <h3 class="title" data-lang="ru">Локация:</h3>
+              <p class="content" data-lang="en">${location["en"]}</p>
+              <p class="content" data-lang="hy">${location["hy"]}</p>
+              <p class="content" data-lang="ru">${location["ru"]}</p>
+            </div>
+            <div class="description">
+              <h3 class="title" data-lang="en">Description:</h3>
+              <h3 class="title" data-lang="hy">Նկարագրություն:</h3>
+              <h3 class="title" data-lang="ru">Описание:</h3>
+              <p class="content" data-lang="en">${description["en"]}</p>
+              <p class="content" data-lang="hy">${description["hy"]}</p>
+              <p class="content" data-lang="ru">${description["ru"]}</p>
+            </div>
+        `;
+    }
+
     static renderHomepageLatestProduct({ info, imageUrl, id }) {
         const { searchParams: params } = new URL(document.location);
         const selectedLanguage = Object.values(AppLanguages).includes(params.get("lang")) ? params.get("lang") : AppLanguages.HY;
@@ -54,11 +81,11 @@ class RenderFunctions {
                             <p class="product__wall">${p.content[selectedLanguage]}</p>
                         </div>`
                     )).join("")}
-<!--                    <a data-lang="en" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Show More</a>-->
-<!--                    <a data-lang="ru" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>-->
-<!--                    <a data-lang="hy" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>-->
                 </div>
                 <div class="divider"></div>
+                <!-- <a data-lang="en" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Show More</a> -->
+                <!-- <a data-lang="ru" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Показать больше</a> -->
+                <!-- <a data-lang="hy" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Ավելին</a> -->
                 <a data-lang="en" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Show More</a>
                 <a data-lang="ru" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>
                 <a data-lang="hy" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>
