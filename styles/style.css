@@ -445,10 +445,6 @@ p {
   flex-wrap: wrap;
 }
 
-#products-list .catalog__item:nth-last-child(-n + 2) {
-  display: none;
-}
-
 .product__item {
   padding: 46px;
   max-width: 434px;
@@ -990,10 +986,27 @@ p {
 .catalog__item {
   max-width: 320px;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__item .product__image1 {
   object-fit: cover;
+}
+
+.catalog__item .product__box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.catalog__item .divider {
+  flex-grow: 1;
+}
+
+.catalog__item .product__box .btn {
+  margin-top: 18px;
+  text-align: center;
 }
 
 .pagination__list {

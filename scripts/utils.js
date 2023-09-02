@@ -57,10 +57,11 @@ class RenderFunctions {
 <!--                    <a data-lang="en" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Show More</a>-->
 <!--                    <a data-lang="ru" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>-->
 <!--                    <a data-lang="hy" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>-->
-                    <a data-lang="en" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Show More</a>
-                    <a data-lang="ru" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>
-                    <a data-lang="hy" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>
                 </div>
+                <div class="divider"></div>
+                <a data-lang="en" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Show More</a>
+                <a data-lang="ru" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>
+                <a data-lang="hy" href="./assets/other/catalog.pdf" target="_blank" download class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>
               </div>
             </li>
         `;

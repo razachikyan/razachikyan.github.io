@@ -69,6 +69,7 @@ store.subscribe(() => {
             // Render 5 products only
             if (i < 5) {
                 const info = JSON.parse(p.description._content.replaceAll(`&quot;`, "\""));
+                console.log(info.properties);
                 $latestProductsList.insertAdjacentHTML("beforeend", RenderFunctions.renderHomepageLatestProduct({
                     id: p.id,
                     info,
