@@ -318,13 +318,14 @@ p {
 
 /* General */
 .general {
-  /*z-index: -10;*/
   position: relative;
-  background-image: url(../assets/images/general-background.png);
+  background-image: url("../assets/images/general-background-1920.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 240px 0 190px 0;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .general__background {
@@ -533,10 +534,12 @@ p {
   position: relative;
   z-index: -1;
   padding: 168px;
-  background-image: url("../assets/images/aboutus.jpg");
+  background-image: url("../assets/images/about-us-1920.png");
   background-position: 40% top;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .aboutus__filter {
@@ -1334,9 +1337,29 @@ p {
   Media queries
 */
 
+@media only screen and (max-width: 1536px) {
+  .general {
+    background-image: url("../assets/images/general-background-1536.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-1536.png");
+  }
+}
+
 @media (max-width: 1350px) {
   .product__item {
     padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .general {
+    background-image: url("../assets/images/general-background-1280.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-1280.png");
   }
 }
 
@@ -1376,6 +1399,16 @@ p {
 
   #elevator-types-form .title {
     grid-column: 1 / span 3;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .general {
+    background-image: url("../assets/images/general-background-1024.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-1024.png");
   }
 }
 
@@ -1671,10 +1704,30 @@ p {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .general {
+    background-image: url("../assets/images/general-background-768.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-768.png");
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .gallery {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .general {
+    background-image: url("../assets/images/general-background-640.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-640.png");
   }
 }
 
@@ -1745,6 +1798,16 @@ p {
 
   .swiper-side {
     width: 75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .general {
+    background-image: url("../assets/images/general-background-480.png");
+  }
+
+  .aboutus {
+    background-image: url("../assets/images/about-us-480.png");
   }
 }
 
