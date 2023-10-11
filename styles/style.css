@@ -1015,7 +1015,7 @@ p {
 }
 
 .catalog__item .product__image1 {
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .catalog__item .product__box {

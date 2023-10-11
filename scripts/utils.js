@@ -71,7 +71,7 @@ class RenderFunctions {
     }
 
     static renderHomepageLatestProduct({ info, imageUrl, id }) {
-        const { searchParams: params } = new URL(document.location);
+         const { searchParams: params } = new URL(document.location);
         const selectedLanguage = Object.values(AppLanguages).includes(
             params.get("lang")
         )
@@ -85,15 +85,17 @@ class RenderFunctions {
                   <h5 class="product__name">${info.name}</h5>
                 </div>
                 <div class="product__descr">
-                    ${info.properties
-                        .map(
-                            (p) =>
-                                `<div class="col">
-                            <h5 class="product__key">${p.label[selectedLanguage]}:</h5>
-                            <p class="product__wall">${p.content[selectedLanguage]}</p>
-                        </div>`
-                        )
-                        .join("")}
+                    ${Array.isArray(info?.properties) ? (
+                        info.properties
+                            .map(
+                                (p) =>
+                                    `<div class="col">
+                                        <h5 class="product__key">${p.label[selectedLanguage]}:</h5>
+                                        <p class="product__wall">${p.content[selectedLanguage]}</p>
+                                    </div>`
+                            )
+                            .join("")
+                    ) : ""}                    
                 </div>
                 <div class="divider"></div>
                 <a data-lang="en" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Show More</a>
@@ -119,20 +121,22 @@ class RenderFunctions {
                   <h5 class="product__name">${info.name}</h5>
                 </div>
                 <div class="product__descr">
-                    ${info.properties
-                        .map(
-                            (p) =>
-                                `<div class="col">
-                            <h5 class="product__key">${p.label[selectedLanguage]}:</h5>
-                            <p class="product__wall">${p.content[selectedLanguage]}</p>
-                        </div>`
-                        )
-                        .join("")}
+                    ${Array.isArray(info?.properties) ? (
+                        info.properties
+                            .map(
+                                (p) =>
+                                    `<div class="col">
+                                                    <h5 class="product__key">${p.label[selectedLanguage]}:</h5>
+                                                    <p class="product__wall">${p.content[selectedLanguage]}</p>
+                                                </div>`
+                            )
+                            .join("")
+                    ) : ""}  
                 </div>
                 <div class="divider"></div>
-                <a data-lang="en" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Show More</a>
-                <a data-lang="ru" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>
-                <a data-lang="hy" href="./catalog.html?product-id=${id}" class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>
+                <a data-lang="en" class="btn general__btn show-more-btn hidden-as-language">Show More</a>
+                <a data-lang="ru" class="btn general__btn show-more-btn hidden-as-language">Показать больше</a>
+                <a data-lang="hy" class="btn general__btn show-more-btn hidden-as-language">Ավելին</a>
               </div>
             </li>
         `;
