@@ -42,7 +42,9 @@ class RenderFunctions {
     static renderGalleryModalInfoSectionContent({
         name,
         location,
-        description,
+        elevatorsCount,
+        elevatorsType,
+        date
     }) {
         return `
             <div class="name">
@@ -59,13 +61,23 @@ class RenderFunctions {
               <p class="content" data-lang="hy">${location["hy"]}</p>
               <p class="content" data-lang="ru">${location["ru"]}</p>
             </div>
-            <div class="description">
-              <h3 class="title" data-lang="en">Description:</h3>
-              <h3 class="title" data-lang="hy">Նկարագրություն:</h3>
-              <h3 class="title" data-lang="ru">Описание:</h3>
-              <p class="content" data-lang="en">${description["en"]}</p>
-              <p class="content" data-lang="hy">${description["hy"]}</p>
-              <p class="content" data-lang="ru">${description["ru"]}</p>
+            <div class="elevators-count">
+              <h3 class="title" data-lang="en">Elevators count:</h3>
+              <h3 class="title" data-lang="hy">Վերելակներ:</h3>
+              <h3 class="title" data-lang="ru">Количество:</h3>
+              <p class="content">${elevatorsCount}</p>
+            </div>
+            <div class="elevators-types">
+              <h3 class="title" data-lang="en">Elevators types:</h3>
+              <h3 class="title" data-lang="hy">Վերելակի տեսակ:</h3>
+              <h3 class="title" data-lang="ru">Тип лифтов:</h3>
+              <p class="content">${elevatorsType}</p>
+            </div>
+            <div class="date">
+              <h3 class="title" data-lang="en">Year:</h3>
+              <h3 class="title" data-lang="hy">Տարեթիվ:</h3>
+              <h3 class="title" data-lang="ru">Год:</h3>
+              <p class="content">${date}</p>
             </div>
         `;
     }
