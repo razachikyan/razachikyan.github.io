@@ -67,6 +67,12 @@ store.subscribe(() => {
 store.subscribe(() => {
     const state = store.getState();
 
+    // Mobile menu
+    const $mobileMenu = document.querySelector("#mobile-menu");
+    if ($mobileMenu) {
+        $mobileMenu.classList.toggle("opened", state.isMobileMenuOpen);
+    }
+
     // Render products
     const $latestProductsList = document.querySelector("#products-list");
 
@@ -88,12 +94,6 @@ store.subscribe(() => {
                 }));
             }
         });
-    }
-
-    // Mobile menu
-    const $mobileMenu = document.querySelector("#mobile-menu");
-    if ($mobileMenu) {
-        $mobileMenu.classList.toggle("opened", state.isMobileMenuOpen);
     }
 
     // Render gallery images
